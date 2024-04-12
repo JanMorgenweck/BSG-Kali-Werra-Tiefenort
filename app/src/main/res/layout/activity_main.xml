@@ -11,7 +11,7 @@
         android:layout_width="587dp"
         android:layout_height="1015dp"
         android:alpha="0.2"
-android:background="@drawable/logo_bsg_kali_werra_kontur_1646x2048"
+        android:background="@drawable/logo_bsg_kali_werra_kontur_1646x2048"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,12 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.bsgkaliwerratiefenort.databinding.ActivityMainBinding
+import com.example.kaliwerra.data.Datasource
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private val viewModel = FirebaseViewModel()
+    var datasource = Datasource().loadMannschaften()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

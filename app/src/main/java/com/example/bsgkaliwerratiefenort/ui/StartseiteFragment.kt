@@ -80,7 +80,7 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.mannschaften.setOnClickListener {
-
+            findNavController().navigate(R.id.mannschaftFragment)
         }
 
         binding.ueberUns.setOnClickListener {

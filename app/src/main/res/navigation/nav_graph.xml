@@ -38,5 +38,17 @@
         android:id="@+id/mannschaftFragment"
         android:name="com.example.bsgkaliwerratiefenort.ui.MannschaftFragment"
         android:label="fragment_mannschaft"
-        tools:layout="@layout/fragment_mannschaft" />
+        tools:layout="@layout/fragment_mannschaft" >
+        <action
+            android:id="@+id/action_mannschaftFragment_to_mannschaftDetailFragment"
+            app:destination="@id/mannschaftDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mannschaftDetailFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.MannschaftDetailFragment"
+        android:label="MannschaftDetailFragment" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
 </navigation>
