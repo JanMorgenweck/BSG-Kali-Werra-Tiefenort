@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "79060861695",
+    "project_id": "kali-werra-tiefenort",
+    "storage_bucket": "kali-werra-tiefenort.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79060861695:android:eca6fcc0177ab5d6e302ca",
+        "android_client_info": {
+          "package_name": "com.example.bsgkaliwerratiefenort"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvQmt3yLcySxl_5_7YXcesCiNlPtpd5i8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

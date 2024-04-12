@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -71,4 +72,27 @@ dependencies {
 
     //Logging
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    //Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+
+    //TODO: Add the dependencies for Firebase products you want to use
+    //When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-storage")
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation ("org.jsoup:jsoup:1.17.2")
+
+    // FirebaseUI Storage only
+    implementation ("com.firebaseui:firebase-ui-storage:7.2.0")
+
+    //Recyclerview
+    implementation ("androidx.recyclerview:recyclerview:1.1.0")
 }

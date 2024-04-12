@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/passwordForgottenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.PasswordForgottenFragment"
+        android:label="fragment_password_forgotten"
+        tools:layout="@layout/fragment_password_forgotten" />
+    <fragment
+        android:id="@+id/startseiteFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.StartseiteFragment"
+        android:label="fragment_startseite"
+        tools:layout="@layout/fragment_startseite" />
+    <fragment
+        android:id="@+id/impressumFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.ImpressumFragment"
+        android:label="fragment_impressum"
+        tools:layout="@layout/fragment_impressum" />
+    <fragment
+        android:id="@+id/mannschaftFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.MannschaftFragment"
+        android:label="fragment_mannschaft"
+        tools:layout="@layout/fragment_mannschaft" />
+</navigation>

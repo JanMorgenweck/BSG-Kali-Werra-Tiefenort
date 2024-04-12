@@ -1,3 +1,51 @@
 <resources>
     <string name="app_name">BSG Kali Werra Tiefenort</string>
+    <string name="online_shop">Online-Shop</string>
+    <string name="sponsoren_partner"><![CDATA[Sponsoren & Partner]]></string>
+    <string name="ber_uns">Über Uns</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="datenschutz">Datenschutz</string>
+    <string name="impressum">Impressum</string>
+    <string name="mannschaften">Mannschaften</string>
+    <string name="verein">Verein</string>
+    <string name="neuigkeiten">Neuigkeiten</string>
+    <string name="tiefenort">Tiefenort</string>
+    <string name="fsv_kali_werra">FSV Kali Werra</string>
+    <string name="beim">beim</string>
+    <string name="willkommen">Willkommen</string>
+    <string name="Mannschaften_Header">AUF DIE TRADITION BEDACHT UND DIE ZUKUNFT FEST IM BLICK – FUSSBALL BEIM FSV KALI WERRA TIEFENORT</string>
+    <string name="Mannschaften_Einleitung">Mit Spaß, Spielidee und Leidenschaft wurde in Tiefenort Fußball gespielt – und das bereits seit 1913. Zwanzig Jahre Zweitliga-Fußball im Kaffeetälchen – atemberaubende Momente. Auch wenn die letzten Jahrzehnte sportlich einer Berg- und Talfahrt glichen, treibt uns ein Ziel weiterhin an: GEMEINSAM wollen wir wieder ERFOLGREICH sein. Für den Sport, für den Verein, für die Region. Werde auch du ein Teil unserer Gemeinschaft, denn wir alle sind Kali Werra!
+
+
+Die Nachwuchsförderung ist der wichtigste Baustein für eine erfolgreiche Zukunft.
+
+
+
+Deshalb hat es sich der FSV Kali Werra Tiefenort zur Aufgabe gemacht, die Jugend leistungsorientiert zu fördern und ihr eine Perspektive zu bieten. Diesem Leitgedanken folgte 2022 die Gründung des Nachwuchszentrums Kali Werra zusammen mit den umliegenden Vereinen der Krayenberg-Region, um ein qualitativ und quantitativ hochwertiges Entwicklungspotenzial aufbieten zu können. In der Spielzeit 2023/24 stellt das Nachwuchszentrum Kali Werra elf Kinder- und Jugendmannschaften zum regelmäßigen Spielbetrieb.</string>
+    <string name="_1_herren_mannschaft">1. Herren Mannschaft</string>
+    <string name="mehr">mehr</string>
+    <string name="Mannschaften_Einleitung_Kurz">Mit Spaß, Spielidee und Leidenschaft wurde in Tiefenort Fußball gespielt – und das bereits seit 1913. ...</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bob">Bob</string>
+    <string name="home">Home</string>
+    <string name="mannschaft">Mannschaft</string>
+    <string name="angaben_gem_5_tmg">Angaben gemäß § 5 TMG</string>
+    <string name="anschrift">
+FSV Kali Werra Tiefenort e.V.
+Kaffeetälchen 3
+36469  Bad Salzungen OT Tiefenort
+
+Vereinsregister: 300135
+Registergericht: Bad Salzungen
+
+Vertreten durch den Vorstand:
+Markus Peter (Vorstandsvorsitzender)</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="send">Send</string>
+    <string name="logout">Logout</string>
 </resources>

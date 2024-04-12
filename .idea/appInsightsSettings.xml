@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.bsgkaliwerratiefenort" />
+                  <option name="mobileSdkAppId" value="1:79060861695:android:eca6fcc0177ab5d6e302ca" />
+                  <option name="projectId" value="kali-werra-tiefenort" />
+                  <option name="projectNumber" value="79060861695" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
