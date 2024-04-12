@@ -13,11 +13,12 @@ import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
+import com.example.kaliwerra.data.Datasource
 
 class MannschaftDetailFragment:Fragment() {
 
     private lateinit var binding: FragmentDetailMannschaftBinding
-
+    var datasource = Datasource().loadMannschaften()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,7 +35,7 @@ class MannschaftDetailFragment:Fragment() {
         val position = arguments?.getInt("position")
 
         binding.tvMannschaftsName.text = (activity as MainActivity).datasource[position!!].name
-//        binding.ivMannschaftsImage.load(activity as MainActivity).datasource[position].image
+        binding.ivMannschaftsImage.load(datasource[position].image)
         binding.tvMannschaftsInfos.text = (activity as MainActivity).datasource[position].info
         binding.tvEmail.text = (activity as MainActivity).datasource[position].email
         binding.tvFussballde.text = (activity as MainActivity).datasource[position].fbde
