@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.R
+import com.example.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
 import com.example.bsgkaliwerratiefenort.databinding.FragmentStartseiteBinding
 
 
@@ -92,7 +94,7 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.Impressum.setOnClickListener {
-            findNavController().navigate(R.id.impressumFragment)
+            showDialogImpressum()
         }
 
         binding.datenschutz.setOnClickListener {
@@ -100,8 +102,18 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.kontakt.setOnClickListener {
-
+            showDialogKontakte()
         }
+    }
+
+    fun showDialogKontakte() {
+        val dialog = KontaktDialogFragment.newInstance()
+        dialog.show(childFragmentManager, "KontaktDialogFragment")
+    }
+
+    fun showDialogImpressum(){
+        val dialog = ImpressumDialogFragment.newInstance()
+        dialog.show(childFragmentManager, "ImpressumDialogFragment")
     }
 
 
