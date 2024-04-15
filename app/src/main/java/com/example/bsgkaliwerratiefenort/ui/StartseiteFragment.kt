@@ -55,14 +55,15 @@ class StartseiteFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.facebook.setOnClickListener{
+        binding.facebook.setOnClickListener {
             var fbUrl = "https://www.facebook.com/FSVKaliWerraTiefenort/"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fbUrl))
             startActivity(intent)
         }
 
         binding.fussballde.setOnClickListener {
-            var fdeUrl = "https://www.fussball.de/verein/fsv-kali-werra-tiefenort-thueringen/-/id/00ES8GNC5C00008NVV0AG08LVUPGND5I#!/"
+            var fdeUrl =
+                "https://www.fussball.de/verein/fsv-kali-werra-tiefenort-thueringen/-/id/00ES8GNC5C00008NVV0AG08LVUPGND5I#!/"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fdeUrl))
             startActivity(intent)
         }
@@ -106,12 +107,12 @@ class StartseiteFragment : Fragment() {
         }
     }
 
-    fun showDialogKontakte() {
+    private fun showDialogKontakte() {
         val dialog = KontaktDialogFragment.newInstance()
         dialog.show(childFragmentManager, "KontaktDialogFragment")
     }
 
-    fun showDialogImpressum(){
+    private fun showDialogImpressum() {
         val dialog = ImpressumDialogFragment.newInstance()
         dialog.show(childFragmentManager, "ImpressumDialogFragment")
     }
