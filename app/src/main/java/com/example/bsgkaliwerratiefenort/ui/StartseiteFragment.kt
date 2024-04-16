@@ -79,7 +79,7 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.verein.setOnClickListener {
-
+            findNavController().navigate(R.id.vereinFragment)
         }
 
         binding.mannschaften.setOnClickListener {

@@ -51,4 +51,14 @@
             android:name="position"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/vereinFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.VereinFragment"
+        android:label="fragment_verein"
+        tools:layout="@layout/fragment_verein" />
+    <fragment
+        android:id="@+id/mitgliedWerdenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.MitgliedWerdenFragment"
+        android:label="fragment_mitglied_werden"
+        tools:layout="@layout/fragment_mitglied_werden" />
 </navigation>

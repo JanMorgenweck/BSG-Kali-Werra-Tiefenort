@@ -77,4 +77,31 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="haftung_links">Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</string>
     <string name="urheberrecht">Urheberrecht</string>
     <string name="urheberrecht_inhalt">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. Quelle: https://www.e-recht24.de/impressum-generator.html</string>
+    <string name="gl_ck_auf_vereinsmitglieder_und_sportkameraden">Glück Auf, Vereinsmitglieder und Sportkameraden!</string>
+    <string name="einleitung">Auf dieser Seite findet ihr Informationen wie zum Beispiel geplante Veranstaltungen, Aufgaben und Aktivitäten unseres Vereines. Damit wir uns in allen Belangen stetig verbessern können, benötigen wir eure Hilfe in Form von Eigeninitiative. Nutzt das Kontaktformular und teilt uns eure Vorschläge, Wünsche, Kritik oder auch Lob rund um unseren Verein und das Waldstadion Kaffeetälchen mit. Wir nehmen dabei sämtliche Anregungen auf und ihr bekommt in jedem Fall eine Rückmeldung von uns.</string>
+    <string name="Datenschutzerklärung">Ich habe die Datenschutzerklärung gelesen und bin damit einverstanden.</string>
+    <string name="senden">Senden</string>
+    <string name="mitglied_werden">Unterstütze den Tiefenorter Fußball und werde Mitglied in unserem Verein!</string>
+    <string name="nachricht">Nachricht</string>
+    <string name="name_name">Name</string>
+    <string name="werde_ein_teil_von_kali_werra">Werde ein Teil von Kali Werra!</string>
+    <string name="online_mitgliedsantrag">Online-Mitgliedsantrag</string>
+    <string name="vorname">Vorname</string>
+    <string name="geburtsdatum">Geburtsdatum</string>
+    <string name="stra_e">Straße</string>
+    <string name="hausnummer">Hausnummer</string>
+    <string name="postleitzahl">Postleitzahl</string>
+    <string name="wohnort">Wohnort</string>
+    <string name="beruf">Beruf</string>
+    <string name="telefon">Telefon</string>
+    <string name="iban">IBAN</string>
+    <string name="bic">BIC</string>
+    <string name="kontoinhaber">Kontoinhaber</string>
+    <string name="mitgliedsbekundung">Mitgliedsbekundung</string>
+    <string name="mitgliedsbekundung_text">Ich habe das 18. Lebensjahr vollendet oder die Zustimmung eines gesetzlichen Vertreters eingeholt und bekunde hiermit meinen Eintritt als Mitglied des Sportvereins FSV Kali Werra Tiefenort e.V.</string>
+    <string name="beitragseinzug">Beitragseinzug</string>
+    <string name="beitragseinzug_text">Ich ermächtige den FSV Kali Werra Tiefenort e.V., Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von FSV Kali Werra Tiefenort e.V. auf mein Konto gezogenen Lastschriften einzulösen. Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</string>
+    <string name="einwilligung_personendaten">Einwilligung Personendaten</string>
+    <string name="datenschutzhinweis">Datenschutzhinweis</string>
+    <string name="Spielerlaubnis">Um aktiv am Spielbetrieb teilnehmen zu können, benötigen wir zusätzlich noch den vollständig ausgefüllten <font color= 'red'>Antrag auf Spielerlaubnis</font>, eine Kopie der Geburtsurkunde, sowie ein Passbild des Mitglieds. Diese Unterlagen sind zeitnah in den entsprechenden Postkasten im Sportlerheim im Waldstadion Kaffeetälchen einzuwerfen.</string>
 </resources>
