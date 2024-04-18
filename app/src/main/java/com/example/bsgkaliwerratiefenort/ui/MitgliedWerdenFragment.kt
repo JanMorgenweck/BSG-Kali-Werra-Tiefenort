@@ -32,11 +32,6 @@ class MitgliedWerdenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tietGeburtsdatum.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus){
-                showDatePickerDialog()
-            }
-        }
 
         binding.btnSenden.setOnClickListener {
 
@@ -105,7 +100,7 @@ class MitgliedWerdenFragment : Fragment() {
                     startActivity(intent)
                     binding.tietVorname.text!!.clear()
                     binding.tietName.text!!.clear()
-                    binding.tietGeburtsdatum.text!!.clear()
+                    binding.tietGeburtsdatum.text!!.isEmpty()
                     binding.tietStraE.text!!.clear()
                     binding.tietHausnummer.text!!.clear()
                     binding.tietPostleitzahl.text!!.clear()
@@ -145,7 +140,11 @@ class MitgliedWerdenFragment : Fragment() {
         binding.tvSpielerlaubnis.setOnClickListener {
             openPDFUrl("https://kali-werra.de/wp-content/uploads/2022/09/Antrag_auf_Erteilung_Spielerlaubnis.pdf")
         }
+        binding.tietGeburtsdatum.setOnClickListener {
+            showDatePickerDialog()
+        }
     }
+
 
     private fun openPDFUrl (url: String){
         val intent = Intent(Intent.ACTION_VIEW)
@@ -159,7 +158,7 @@ class MitgliedWerdenFragment : Fragment() {
             popupMenu.menu.add(mannschaft)
         }
         popupMenu.setOnMenuItemClickListener { menuItem ->
-            binding.tietMannschaft.setText(menuItem.title)
+            binding.tietMannschaft.text = menuItem.title
             true
         }
         popupMenu.show()
@@ -173,7 +172,7 @@ class MitgliedWerdenFragment : Fragment() {
 
         val datePickerDialog = DatePickerDialog(requireContext(),{ _, year, month, dayOfMonth ->
         val selectedDate = "$dayOfMonth/${month +1 }/$year"
-        binding.tietGeburtsdatum.setText(selectedDate)
+            binding.tietGeburtsdatum.text = selectedDate
         }, year,month,day)
 
         datePickerDialog.show()

@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.bsgkaliwerratiefenort.databinding.MannschaftItemBinding
 import com.example.bsgkaliwerratiefenort.ui.MannschaftFragmentDirections
-import com.example.kaliwerra.data.Mannschaften
+import com.example.kaliwerra.data.Mannschaft
 
 
 class MannschaftsAdapter(
 
-    private val dataset: List<Mannschaften>
+    private val dataset: List<Mannschaft>
 ) : RecyclerView.Adapter<MannschaftsAdapter.ItemViewHolder>() {
 
 

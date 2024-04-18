@@ -116,23 +116,20 @@
                 android:hint="@string/name_name" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilGeburtsdatum"
+        <TextView
+            android:id="@+id/tietGeburtsdatum"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
+            android:background="#E0E0E0"
+            android:gravity="center_vertical"
+            android:text="    Geburtsdatum"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilName">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietGeburtsdatum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/geburtsdatum" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tilName" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilStraße"
@@ -143,7 +140,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilGeburtsdatum">
+            app:layout_constraintTop_toBottomOf="@+id/tietGeburtsdatum">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tietStraße"

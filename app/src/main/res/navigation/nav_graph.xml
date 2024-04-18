@@ -50,6 +50,9 @@
         <argument
             android:name="position"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_mannschaftDetailFragment_to_tabelleFragment"
+            app:destination="@id/tabelleFragment" />
     </fragment>
     <fragment
         android:id="@+id/vereinFragment"
@@ -61,4 +64,13 @@
         android:name="com.example.bsgkaliwerratiefenort.ui.MitgliedWerdenFragment"
         android:label="fragment_mitglied_werden"
         tools:layout="@layout/fragment_mitglied_werden" />
+    <fragment
+        android:id="@+id/tabelleFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.TabelleFragment"
+        android:label="fragment_tabelle"
+        tools:layout="@layout/fragment_tabelle" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
 </navigation>

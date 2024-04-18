@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.model
+package com.example.bsgkaliwerratiefenort.data.model
 
 // Datenklasse um Profil abzubilden
 data class Profile(

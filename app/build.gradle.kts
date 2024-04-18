@@ -46,6 +46,7 @@ android {
 dependencies {
 
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     val retrofitVersion = "2.9.0"
     val roomVersion = "2.6.0"
 
@@ -97,4 +98,6 @@ dependencies {
 
     //Recyclerview
     implementation ("androidx.recyclerview:recyclerview:1.1.0")
+
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

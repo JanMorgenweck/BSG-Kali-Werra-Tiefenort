@@ -8,10 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
+import com.example.bsgkaliwerratiefenort.ViewModel
 import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
 import com.example.kaliwerra.data.Datasource
 
@@ -19,6 +22,7 @@ class MannschaftDetailFragment:Fragment() {
 
     private lateinit var binding: FragmentDetailMannschaftBinding
     var datasource = Datasource().loadMannschaften()
+    private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,7 +70,12 @@ class MannschaftDetailFragment:Fragment() {
         binding.homeicon.setOnClickListener {
             findNavController().navigate(R.id.startseiteFragment)
         }
-    }
 
+        binding.tvTabelle.setOnClickListener {
+            viewModel.loadMannschaften(datasource[position].leagueShortcut, datasource[position].leagueSeason)
+            findNavController().navigate(MannschaftDetailFragmentDirections.actionMannschaftDetailFragmentToTabelleFragment(position))
+
+        }
+    }
 
 }
