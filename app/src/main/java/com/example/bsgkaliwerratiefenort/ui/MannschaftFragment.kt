@@ -13,6 +13,7 @@ import com.example.kaliwerra.Adapter.MannschaftsAdapter
 import com.example.kaliwerra.data.Datasource
 
 
+
 class MannschaftFragment : Fragment() {
 
     private lateinit var binding: FragmentMannschaftBinding

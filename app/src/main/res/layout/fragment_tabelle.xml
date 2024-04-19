@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/backround"
@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.875"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -29,11 +30,12 @@
 
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:src="@drawable/menu_icon" />
+            android:src="@drawable/menu_icon"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/arrow_back"
@@ -42,9 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:backgroundTint="#00FFFFFF"
-            android:contentDescription="text"
-            app:srcCompat="@drawable/baseline_arrow_back_24"
-            tools:ignore="TouchTargetSizeCheck" />
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
 
         <ImageView
             android:id="@+id/logoToolbar"
@@ -60,9 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#00FFFFFF"
-            android:contentDescription="text"
-            app:srcCompat="@drawable/icons8_home_24"
-            tools:ignore="TouchTargetSizeCheck" />
+            app:srcCompat="@drawable/icons8_home_24" />
 
 
     </LinearLayout>
@@ -75,10 +73,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
+        android:gravity="center"
         android:text="TextView"
         android:textSize="24sp"
         android:textStyle="bold|italic"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -92,6 +90,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMannschaftsName"
+        app:layout_constraintTop_toBottomOf="@+id/ivAnimation"
         tools:listitem="@layout/tabelle_item" />
+
+    <ImageView
+        android:id="@+id/ivAnimation"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMannschaftsName"
+        app:srcCompat="@drawable/ball_anim"
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>
