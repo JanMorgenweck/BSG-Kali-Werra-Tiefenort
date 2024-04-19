@@ -9,12 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.ViewModel
+import com.example.bsgkaliwerratiefenort.MyViewModel
 import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
 import com.example.kaliwerra.data.Datasource
 
@@ -22,7 +21,7 @@ class MannschaftDetailFragment:Fragment() {
 
     private lateinit var binding: FragmentDetailMannschaftBinding
     var datasource = Datasource().loadMannschaften()
-    private val viewModel: ViewModel by activityViewModels()
+    private val viewModel: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,6 +74,20 @@ class MannschaftDetailFragment:Fragment() {
             viewModel.loadMannschaften(datasource[position].leagueShortcut, datasource[position].leagueSeason)
             findNavController().navigate(MannschaftDetailFragmentDirections.actionMannschaftDetailFragmentToTabelleFragment(position))
 
+        }
+
+        binding.tvSpiele.setOnClickListener {
+            viewModel.loadLastMatch(datasource[position].leagueId, datasource[position].teamId)
+            viewModel.loadNextMatch(datasource[position].leagueId,datasource[position].teamId)
+            findNavController().navigate(MannschaftDetailFragmentDirections.actionMannschaftDetailFragmentToNaechstesUndLetztesSpielFragment(position))
+        }
+
+        binding.arrowBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
+        binding.homeicon.setOnClickListener {
+            findNavController().navigate(R.id.startseiteFragment)
         }
     }
 

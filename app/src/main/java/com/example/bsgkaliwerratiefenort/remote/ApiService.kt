@@ -1,6 +1,7 @@
 package com.example.bsgkaliwerratiefenort.remote
 
 import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
+import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -34,6 +35,12 @@ interface ApiService{
 
     @GET("getbltable/{leagueShortcut}/{leagueSeason}")
     suspend fun getTable(@Path("leagueShortcut") leagueShortcut:String, @Path("leagueSeason") leagueSeason:Int):List<MannschaftAPI>
+
+    @GET("getlastmatchbyleagueteam/{leagueId}/{teamId}")
+    suspend fun getLastMatch(@Path("leagueId") leagueId: Int, @Path("teamId") teamId: Int): Match
+
+    @GET("getnextmatchbyleagueteam/{leagueId}/{teamId}")
+    suspend fun getNextMatch(@Path("leagueId") leagueId: Int, @Path("teamId") teamId: Int): Match
 
 
 

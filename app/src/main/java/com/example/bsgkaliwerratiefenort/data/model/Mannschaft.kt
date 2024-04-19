@@ -9,6 +9,9 @@ data class Mannschaft(
     val link: String,
     val leagueShortcut: String,
     val leagueSeason: Int,
+    val leagueId: Int,
+    val teamId: Int
+
 
 
 )

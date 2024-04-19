@@ -19,7 +19,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/011MIAF2K0000000VTVG0001VTR8C1K7#!/",
                "",
-                2023
+                2023,
+                0,
+                6311
 
             ),
             Mannschaft(
@@ -36,7 +38,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/1-kreisklasse-staffel-2-kreis-westthueringen-1kreisklasse-herren-saison2223-thueringen/-/staffel/02IKCH8RSC000007VS5489B3VVETK79U-G#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "Edle Herren",
@@ -50,7 +54,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/011MIBOG34000000VTVG0001VTR8C1K7#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "B - Junioren",
@@ -66,7 +72,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/02EV21G1SK000000VS5489B1VT0RKM5V#!/",
                 "KLST2BJ",
-                2023
+                2023,
+                4727,
+                6311
             ),
             Mannschaft(
                 "C - Junioren",
@@ -82,7 +90,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/01KRG0D94S000000VV0AG811VUP4Q6U8#!/",
                 "CJST3",
-                2023
+                2023,
+                4723,
+                6311
             ),
             Mannschaft(
                 "D1 - Junioren",
@@ -98,7 +108,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/01DN527O10000000VV0AG80NVSQ3PCMQ#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "D2 - Junioren",
@@ -114,7 +126,10 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-ii-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/02IATOMMS4000000VS5489B2VU2I8R4H#!/",
                 "D2JKLSt3",
-                2023
+                2023,
+                4726,
+                6311
+
             ),
             Mannschaft(
                 "E1 - Junioren",
@@ -130,7 +145,10 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/01ABBC50F4000000VV0AG80NVTF249LS#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
+
             ),
             Mannschaft(
                 "E2 - Junioren",
@@ -146,7 +164,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-ii-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/02IATTEK7S000000VS5489B2VU2I8R4H#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "E - Juniorinnen",
@@ -160,7 +180,9 @@ class Datasource {
                 "",
                 "",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "F1 - Junioren",
@@ -176,7 +198,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/1819/team-id/012UNHUJO0000000VV0AG811VVETIMC3#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "F2 - Junioren",
@@ -192,7 +216,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-ii-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/02IATVGSV0000000VS5489B2VU2I8R4H#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "F3 - Junioren",
@@ -208,7 +234,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-iii-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/02IAU02HDK000000VS5489B2VU2I8R4H#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             ),
             Mannschaft(
                 "G - Junioren",
@@ -224,7 +252,9 @@ class Datasource {
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/023K51PRN8000000VS548984VTFV1I8K#!/",
                 "",
-                2023
+                2023,
+                0,
+                6311
             )
 
         )
