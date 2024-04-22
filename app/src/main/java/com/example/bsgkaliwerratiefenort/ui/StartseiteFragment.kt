@@ -75,7 +75,7 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.neuigkeiten.setOnClickListener {
-
+            findNavController().navigate(R.id.neuigkeitenFragment)
         }
 
         binding.verein.setOnClickListener {
@@ -87,11 +87,11 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.ueberUns.setOnClickListener {
-
+            findNavController().navigate(R.id.ueberUnsFragment)
         }
 
         binding.Sponsoren.setOnClickListener {
-
+            findNavController().navigate(R.id.sponsorenFragment)
         }
 
         binding.Impressum.setOnClickListener {

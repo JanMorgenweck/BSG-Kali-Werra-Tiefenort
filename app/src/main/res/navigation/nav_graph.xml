@@ -85,4 +85,29 @@
             android:name="position"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/favoritenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.FavoritenFragment"
+        android:label="fragment_favoriten"
+        tools:layout="@layout/fragment_favoriten" />
+    <fragment
+        android:id="@+id/neuigkeitenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.NeuigkeitenFragment"
+        android:label="fragment_neuigkeiten"
+        tools:layout="@layout/fragment_neuigkeiten" />
+    <fragment
+        android:id="@+id/sponsorenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.SponsorenFragment"
+        android:label="fragment_sponsoren"
+        tools:layout="@layout/fragment_sponsoren" />
+    <fragment
+        android:id="@+id/ueberUnsFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.UeberUnsFragment"
+        android:label="fragment_ueber_uns"
+        tools:layout="@layout/fragment_ueber_uns" />
 </navigation>

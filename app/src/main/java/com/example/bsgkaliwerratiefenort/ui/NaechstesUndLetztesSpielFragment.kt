@@ -95,10 +95,10 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
                     findNavController().navigate(R.id.startseiteFragment)
                     true
                 }
-//                R.id.action_Neuigkeiten -> {
-//                    findNavController().navigate(R.id.neuigkeitenFragment)
-//                    true
-//                }
+                R.id.action_Neuigkeiten -> {
+                    findNavController().navigate(R.id.neuigkeitenFragment)
+                    true
+                }
                 R.id.action_verein -> {
                     findNavController().navigate(R.id.vereinFragment)
                     true
@@ -107,28 +107,28 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
                     findNavController().navigate(R.id.mannschaftFragment)
                     true
                 }
-//                R.id.action_ueberUns -> {
-//                    findNavController().navigate(R.id.)
-//                    true
-//                }
-//                R.id.action_sponsorenPartner -> {
-//                    findNavController().navigate(R.id.)
-//                    true
-//                }
+                R.id.action_ueberUns -> {
+                    findNavController().navigate(R.id.ueberUnsFragment)
+                    true
+                }
+                R.id.action_sponsorenPartner -> {
+                    findNavController().navigate(R.id.sponsorenFragment)
+                    true
+                }
                 R.id.action_onlineShop -> {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://kali-werra-shop.de"))
                     startActivity(intent)
                     true
                 }
 
-//                R.id.action_profil -> {
-//                    findNavController().navigate(R.id.)
-//                    true
-//                }
-//                R.id.action_favoriten -> {
-//                    findNavController().navigate(R.id.)
-//                    true
-//                }
+                R.id.action_profil -> {
+                    findNavController().navigate(R.id.profilFragment)
+                    true
+                }
+                R.id.action_favoriten -> {
+                    findNavController().navigate(R.id.favoritenFragment)
+                    true
+                }
                 else -> false
             }
         }
