@@ -148,4 +148,8 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <!--About screen -->
     <string name="aboutLibraries_description_showIcon">true</string>
     <string name="aboutLibraries_description_showVersion">true</string>
+    <string name="startseite">Startseite</string>
+    <string name="favoriten">Favoriten</string>
+    <string name="profil_account">Profil/Account</string>
+    <string name="hamburger_menu_icon">Hamburger Menu Icon</string>
 </resources>

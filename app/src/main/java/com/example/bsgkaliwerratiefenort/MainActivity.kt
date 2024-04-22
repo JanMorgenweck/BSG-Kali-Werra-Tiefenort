@@ -1,11 +1,13 @@
 package com.example.bsgkaliwerratiefenort
 
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.databinding.ActivityMainBinding
 import com.example.kaliwerra.data.Datasource
@@ -14,7 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+
     var datasource = Datasource().loadMannschaften()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +37,15 @@ class MainActivity : AppCompatActivity() {
     private fun handleOnBackPressed() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                binding.fragmentContainerView.findNavController().navigateUp()
+                val currentDestination = binding.fragmentContainerView.findNavController().currentDestination
+                if (currentDestination?.id == R.id.startseiteFragment){
+                    finish()
+                }else {
+                    binding.fragmentContainerView.findNavController().navigateUp()
+                }
             }
         }
         onBackPressedDispatcher.addCallback(callback)
     }
+
 }

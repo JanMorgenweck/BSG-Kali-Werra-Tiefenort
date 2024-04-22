@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item
+        android:id="@+id/action_startseite"
+        android:title="@string/startseite" />
+
+    <item
+        android:id="@+id/action_Neuigkeiten"
+        android:title="@string/neuigkeiten"/>
+
+    <item
+        android:id="@+id/action_verein"
+        android:title="@string/verein" />
+
+    <item
+        android:id="@+id/action_manschaften"
+        android:title="@string/mannschaften" />
+
+    <item
+        android:id="@+id/action_ueberUns"
+        android:title="@string/ber_uns"/>
+
+    <item
+        android:id="@+id/action_sponsorenPartner"
+        android:title="@string/sponsoren_partner"/>
+
+    <item
+        android:id="@+id/action_onlineShop"
+        android:title="@string/online_shop"/>
+
+</group>
+
+    <item
+        android:id="@+id/action_profil"
+        android:title="@string/profil_account" />
+
+    <item
+        android:id="@+id/action_favoriten"
+        android:title="@string/favoriten"/>
+
+
+</menu>
