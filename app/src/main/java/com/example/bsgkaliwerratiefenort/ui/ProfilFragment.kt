@@ -20,23 +20,22 @@ class ProfilFragment : Fragment() {
 
     private lateinit var binding: FragmentProfilBinding
     private val viewModel: FirebaseViewModel by activityViewModels()
-    private val selectImageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){result ->
-        if (result.resultCode == Activity.RESULT_OK){
-            val data: Intent? = result.data
-            data?.data?.let { uri ->
-                binding.ivProfilePicture.setImageURI(uri)
+    private val selectImageLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                data?.data?.let { uri ->
+                    binding.ivProfilePicture.setImageURI(uri)
 
-                viewModel.uploadImage(uri)
+                    viewModel.uploadImage(uri)
+                }
             }
         }
-    }
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentProfilBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,8 +43,8 @@ class ProfilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.profileRef.addSnapshotListener{ value, error ->
-            if (error == null && value != null){
+        viewModel.profileRef.addSnapshotListener { value, error ->
+            if (error == null && value != null) {
                 val myProfile = value.toObject(Profile::class.java)
                 if (myProfile != null) {
                     binding.tvFirstName.setText(myProfile.firstName)
@@ -62,31 +61,26 @@ class ProfilFragment : Fragment() {
         binding.ibProfilePictureEdit.setOnClickListener {
             selectImage()
         }
-
         binding.btSave.setOnClickListener {
             val firstName = binding.tvFirstName.text.toString()
             val lastName = binding.tvLastName.text.toString()
             val profilePicUri = viewModel.profilePictureUri.value
 
-            if (firstName.isNotEmpty() && lastName.isNotEmpty()){
+            if (firstName.isNotEmpty() && lastName.isNotEmpty()) {
                 val newProfile = Profile(firstName, lastName, profilePicUri.toString())
                 viewModel.updateProfile(newProfile)
-                viewModel.updateProfilePicture(newProfile)
+                viewModel.updateProfilePicture()
             }
-
         }
-
-        viewModel.currentUser.observe(viewLifecycleOwner){ user ->
+        viewModel.currentUser.observe(viewLifecycleOwner) { user ->
             user?.let {
                 binding.tvEmail.text = it.email
             }
         }
-
     }
 
-
-    private fun selectImage(){
-        val intent = Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+    private fun selectImage() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         selectImageLauncher.launch(intent)
     }
 }
