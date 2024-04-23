@@ -152,4 +152,7 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="favoriten">Favoriten</string>
     <string name="profil_account">Profil/Account</string>
     <string name="hamburger_menu_icon">Hamburger Menu Icon</string>
+    <string name="speichern">Speichern</string>
+    <string name="bitte_vornamen_eingeben">Bitte Vornamen eingeben</string>
+    <string name="bitte_nachname_eingeben">Bitte Nachname eingeben</string>
 </resources>

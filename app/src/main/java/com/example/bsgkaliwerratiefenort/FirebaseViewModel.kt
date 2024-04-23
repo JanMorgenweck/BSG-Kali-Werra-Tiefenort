@@ -1,7 +1,5 @@
 package com.example.bsgkaliwerratiefenort
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -13,8 +11,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import java.io.ByteArrayOutputStream
 
 class FirebaseViewModel: ViewModel() {
 
@@ -43,6 +39,12 @@ class FirebaseViewModel: ViewModel() {
     // Statische Referenz auf die Notes Collection
     val notesRef = fireStore.collection("notes")
 
+    private val _profilePictureUri = MutableLiveData<Uri>()
+    val profilePictureUri: LiveData<Uri>
+        get() = _profilePictureUri
+
+
+
     // "Cookie-Funktion": Wenn ein User die App startet und bereits eingeloggt ist
     // Dann müssen wir auch die profileRef Variable setzen, damit App nicht abstürzt
     init {
@@ -53,31 +55,46 @@ class FirebaseViewModel: ViewModel() {
 
     // Funktion um Bild in den Firebase Storage hochzuladen
     fun uploadImage(uri: Uri) {
-        // Erstellen einer Referenz und des Upload Tasks
         val imageRef = storageRef.child("images/${firebaseAuth.currentUser!!.uid}/profilePic")
         val uploadTask = imageRef.putFile(uri)
 
-        // Wenn UploadTask ausgeführt und erfolgreich ist, wird die Download-Url des Bildes an die setUserImage Funktion weitergegeben
-        uploadTask.addOnCompleteListener {
-            imageRef.downloadUrl.addOnCompleteListener {
-                if (it.isSuccessful) {
-                    setUserImage(it.result)
+        uploadTask.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                imageRef.downloadUrl.addOnCompleteListener { urlTask ->
+                    if (urlTask.isSuccessful) {
+                        // Aktualisiere profilePictureUri hier
+                        _profilePictureUri.value =urlTask.result
+                    }
                 }
+            } else {
+                Log.e("FirebaseViewModel", "Upload failed: ${task.exception}")
             }
         }
     }
 
     // Funktion um Url zu neue hochgeladenem Bild im Firestore dem aktuellen Userprofil hinzuzufügen
-    private fun setUserImage(uri: Uri) {
+    fun setUserImage(uri: Uri) {
         profileRef.update("profilePicture", uri.toString())
     }
 
-
-    // Funktion um das Profil eines Users zu updaten
-    fun updateProfile(profile: Profile) {
+    fun updateProfile(profile: Profile){
         profileRef.set(profile)
+        Log.e("FirebaseViewModel", "Profile updated successfully")
     }
-
+    // Funktion um das Profil eines Users zu updaten
+    fun updateProfilePicture(profile: Profile)
+    {
+        // Stelle sicher, dass profilePictureUri nicht null ist, bevor es verwendet wird
+        profilePictureUri.value?.let { uri ->
+            profileRef.update("profilePicture", uri.toString())
+                .addOnSuccessListener {
+                    Log.d("FirebaseViewModel", "Profile Picture updated successfully")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("FirebaseViewModel", "Error updating profile: $e")
+                }
+        }
+    }
 
     // Funktion um neuen User zu erstellen
     fun register(email: String, password: String) {
@@ -90,7 +107,7 @@ class FirebaseViewModel: ViewModel() {
                 // Die Profil-Referenz wird jetzt gesetzt, da diese vom aktuellen User abhängt
                 profileRef = fireStore.collection("profiles").document(firebaseAuth.currentUser!!.uid)
                 // Ein neues, leeres Profil wird für jeden User erstellt der zum ersten mal einen Account für die App anlegt
-                profileRef.set(Profile())
+                profileRef.set(Profile(email, password))
                 // Danach führen wir logout Funktion aus, da beim Erstellen eines Users dieser sofort eingeloggt wird
                 logout()
             } else {
