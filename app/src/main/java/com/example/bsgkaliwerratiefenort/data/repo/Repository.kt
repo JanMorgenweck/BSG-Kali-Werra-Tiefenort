@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
 import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.remote.Api
-import com.example.bsgkaliwerratiefenort.remote.ApiService
 
 class Repository(private val apiService: Api) {
 
@@ -53,6 +52,5 @@ class Repository(private val apiService: Api) {
             Log.e("TAG", "Kein laden möglich $e")
         }
     }
-
 
 }

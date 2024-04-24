@@ -56,6 +56,9 @@
         <action
             android:id="@+id/action_mannschaftDetailFragment_to_naechstesUndLetztesSpielFragment"
             app:destination="@id/naechstesUndLetztesSpielFragment" />
+        <action
+            android:id="@+id/action_mannschaftDetailFragment_to_favoritenFragment"
+            app:destination="@id/favoritenFragment" />
     </fragment>
     <fragment
         android:id="@+id/vereinFragment"
@@ -94,7 +97,11 @@
         android:id="@+id/favoritenFragment"
         android:name="com.example.bsgkaliwerratiefenort.ui.FavoritenFragment"
         android:label="fragment_favoriten"
-        tools:layout="@layout/fragment_favoriten" />
+        tools:layout="@layout/fragment_favoriten" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/neuigkeitenFragment"
         android:name="com.example.bsgkaliwerratiefenort.ui.NeuigkeitenFragment"

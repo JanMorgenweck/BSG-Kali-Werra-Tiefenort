@@ -6,75 +6,52 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.PopupMenu
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import coil.load
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
+import com.example.bsgkaliwerratiefenort.Adapter.FavoritenAdapter
 import com.example.bsgkaliwerratiefenort.MyViewModel
-import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
-import com.example.kaliwerra.data.Datasource
+import com.example.bsgkaliwerratiefenort.R
+import com.example.bsgkaliwerratiefenort.databinding.FragmentFavoritenBinding
 
-class MannschaftDetailFragment:Fragment() {
 
-    private lateinit var binding: FragmentDetailMannschaftBinding
-    var datasource = Datasource().loadMannschaften()
-    private val viewModel: MyViewModel by activityViewModels()
+class FavoritenFragment : Fragment() {
+
+    private lateinit var binding: FragmentFavoritenBinding
+    private val viewModel : MyViewModel by activityViewModels()
+
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentDetailMannschaftBinding.inflate(inflater, container, false)
+       binding = FragmentFavoritenBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val position = arguments?.getInt("position")
-
-        binding.tvMannschaftsName.text = (activity as MainActivity).datasource[position!!].name
-        binding.ivMannschaftsImage.load(datasource[position].image)
-        binding.tvMannschaftsInfos.text = (activity as MainActivity).datasource[position].info
-        binding.tvEmail.text = (activity as MainActivity).datasource[position].email
-        binding.tvFussballde.text = (activity as MainActivity).datasource[position].fbde
-
-        binding.tvEmail.setOnClickListener {
-            val email = (activity as MainActivity).datasource[position].email
-            val intent = Intent(Intent.ACTION_SEND).apply {
-                type = "message/rfc822"
-                putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-            }
-            if (intent.resolveActivity(requireActivity().packageManager) != null) {
-                startActivity(Intent.createChooser(intent, "E-Mail senden"))
-            } else {
-                Toast.makeText(requireContext(), "Keine geeignete App gefunden", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        binding.tvFussballde.setOnClickListener {
-            var fdeUrl = (activity as MainActivity).datasource[position].link
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fdeUrl))
-            startActivity(intent)
+        viewModel.favoriteTeam.observe(viewLifecycleOwner){
+            val adapter = FavoritenAdapter(it, viewModel, viewLifecycleOwner)
+            binding.rvFavoriten.adapter = adapter
         }
 
 
-        binding.tvTabelle.setOnClickListener {
-            viewModel.loadMannschaften(datasource[position].leagueShortcut, datasource[position].leagueSeason)
-            findNavController().navigate(MannschaftDetailFragmentDirections.actionMannschaftDetailFragmentToTabelleFragment(position))
 
-        }
 
-        binding.tvSpiele.setOnClickListener {
-            viewModel.loadLastMatch(datasource[position].leagueId, datasource[position].teamId)
-            viewModel.loadNextMatch(datasource[position].leagueId,datasource[position].teamId)
-            findNavController().navigate(MannschaftDetailFragmentDirections.actionMannschaftDetailFragmentToNaechstesUndLetztesSpielFragment(position))
-        }
+
+
+
+
+
+
+
+
+
+
 
         binding.arrowBack.setOnClickListener {
             findNavController().navigateUp()
@@ -88,11 +65,8 @@ class MannschaftDetailFragment:Fragment() {
             showPopupMenu()
         }
 
-        binding.tvFavoriten.setOnClickListener {
-            var datasource = Datasource().loadMannschaften()
-            viewModel.saveFavorite(datasource[position])
-        }
     }
+
     private fun showPopupMenu(){
         val popupMenu = PopupMenu(requireContext(),binding.ivMenu)
         popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)

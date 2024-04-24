@@ -155,4 +155,7 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="speichern">Speichern</string>
     <string name="bitte_vornamen_eingeben">Bitte Vornamen eingeben</string>
     <string name="bitte_nachname_eingeben">Bitte Nachname eingeben</string>
+    <string name="team_name">Team Name</string>
+    <string name="n_chstes_spiel">Nächstes Spiel</string>
+    <string name="zu_den_favoriten_hinzuf_gen">zu den Favoriten hinzufügen</string>
 </resources>
