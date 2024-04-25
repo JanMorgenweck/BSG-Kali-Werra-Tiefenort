@@ -14,9 +14,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bsgkaliwerratiefenort.Adapter.TabelleAdapter
+import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.MyViewModel
 
 import com.example.bsgkaliwerratiefenort.databinding.FragmentTabelleBinding
 
@@ -24,7 +24,7 @@ import com.example.bsgkaliwerratiefenort.databinding.FragmentTabelleBinding
 class TabelleFragment : Fragment() {
 
     private lateinit var binding: FragmentTabelleBinding
-    private val viewModel: MyViewModel by activityViewModels()
+    private val viewModel: FirebaseViewModel by activityViewModels()
     private lateinit var ballAnimation: AnimatedVectorDrawable
     private val animationCallback = object : Animatable2.AnimationCallback(){
         override fun onAnimationEnd(drawable: Drawable?) {

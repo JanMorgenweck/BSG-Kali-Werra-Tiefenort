@@ -6,6 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
 import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.remote.Api
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class Repository(private val apiService: Api) {
 
@@ -43,14 +45,17 @@ class Repository(private val apiService: Api) {
     val nextMatch: LiveData<Match>
         get() = _nextMatch
 
-    suspend fun getNextMatch(leagueId: Int, teamId: Int){
-
+    suspend fun getNextMatch(leagueId: Int, teamId: Int) {
         try {
             val result = apiService.retrofitService.getNextMatch(leagueId, teamId)
-            _nextMatch.postValue(result)
-        } catch (e:Exception){
+            _nextMatch.value = result
+        } catch (e: Exception) {
             Log.e("TAG", "Kein laden möglich $e")
         }
     }
+
+
+
+
 
 }

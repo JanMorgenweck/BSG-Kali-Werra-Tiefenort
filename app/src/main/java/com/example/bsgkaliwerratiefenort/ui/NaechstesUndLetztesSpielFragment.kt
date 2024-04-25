@@ -2,7 +2,6 @@ package com.example.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Binder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,22 +9,18 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import coil.load
+import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.MyViewModel
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.databinding.FragmentNaechstesUndLetztesSpielBinding
-import kotlinx.coroutines.launch
 
 
 class NaechstesUndLetztesSpielFragment : Fragment() {
 
     private lateinit var binding: FragmentNaechstesUndLetztesSpielBinding
-    private val viewModel: MyViewModel by activityViewModels()
+    private val viewModel: FirebaseViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

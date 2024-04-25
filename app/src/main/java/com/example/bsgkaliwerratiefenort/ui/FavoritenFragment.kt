@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bsgkaliwerratiefenort.Adapter.FavoritenAdapter
-import com.example.bsgkaliwerratiefenort.MyViewModel
+import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentFavoritenBinding
 
@@ -20,7 +19,7 @@ import com.example.bsgkaliwerratiefenort.databinding.FragmentFavoritenBinding
 class FavoritenFragment : Fragment() {
 
     private lateinit var binding: FragmentFavoritenBinding
-    private val viewModel : MyViewModel by activityViewModels()
+    private val viewModel : FirebaseViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -34,22 +33,13 @@ class FavoritenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         viewModel.favoriteTeam.observe(viewLifecycleOwner){
             val adapter = FavoritenAdapter(it, viewModel, viewLifecycleOwner)
             binding.rvFavoriten.adapter = adapter
         }
-
-
-
-
-
-
-
-
-
-
-
-
+        viewModel.loadFavoritesFromFirebase()
 
 
 

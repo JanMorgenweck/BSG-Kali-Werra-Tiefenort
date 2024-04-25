@@ -1,17 +1,18 @@
 package com.example.bsgkaliwerratiefenort.Adapter
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.bsgkaliwerratiefenort.MyViewModel
+import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.databinding.ItemFavoritenBinding
 import com.example.kaliwerra.data.Mannschaft
 
 class FavoritenAdapter(
     private var favoriten: List<Mannschaft>,
-    private val viewModel: MyViewModel,
+    private val viewModel: FirebaseViewModel,
     private val lifecycleOwner: LifecycleOwner
 
 ) : RecyclerView.Adapter<FavoritenAdapter.FavoritenViewHolder>() {
@@ -35,26 +36,43 @@ class FavoritenAdapter(
         with(holder.binding) {
             tvMannschaftsName.text = favorit.name
 
-            val match = viewModel.loadNextMatch(favorit.leagueId,favorit.teamId)
+            viewModel.loadNextMatch(favorit.leagueId, favorit.teamId)
 
-            viewModel.nextMatch.observe(lifecycleOwner) {
+            viewModel.nextMatch.observe(lifecycleOwner) { match ->
 
-                tvDateNextMatch.text = it.matchDateTime
-                teamCrestNextMatch.load(it.team1.teamIconUrl)
-                teamNameNextMatch.text = it.team1.teamName
-                if (viewModel.nextMatch.value!!.matchIsFinished) {
-                    tvPointsTeam1NextMatch.text =
-                        viewModel.nextMatch.value!!.matchResults.first { it.resultName == "Endergebnis" }.pointsTeam1.toString()
-                    tvPointsTeam2NextMatch.text =
-                        viewModel.nextMatch.value!!.matchResults.first { it.resultName == "Endergebnis" }.pointsTeam2.toString()
-                } else {
-                    tvPointsTeam1NextMatch.text = "-"
-                    tvPointsTeam2NextMatch.text = "-"
+                match?.let {
+                    tvDateNextMatch.text = match.matchDateTime
+                    teamCrestNextMatch.load(match.team1.teamIconUrl)
+                    teamNameNextMatch.text = match.team1.teamName
+                    if (match.matchIsFinished) {
+                        val result = match.matchResults.first{ it.resultName == "Endergebnis" }
+                        tvPointsTeam1NextMatch.text = result?.pointsTeam1?.toString() ?: "-"
+                        tvPointsTeam2NextMatch.text = result?.pointsTeam2?.toString() ?: "-"
+                    } else {
+                        tvPointsTeam1NextMatch.text = "-"
+                        tvPointsTeam2NextMatch.text = "-"
+                    }
+                    teamCrest2NextMatch.load(match.team2.teamIconUrl)
+                    teamName2NextMatch.text = match.team2.teamName
+
+            }
+         }
+            holder.binding.clFavorite.setOnLongClickListener {
+                val alertDialogBuilder = AlertDialog.Builder(holder.itemView.context)
+                alertDialogBuilder.apply {
+                    setMessage("Möchten Sie ${favorit.name} aus Favoriten entfernen?")
+                    setPositiveButton("Ja") { _, _ ->
+                        viewModel.removeFavorite(favorit)
+                        favoriten = favoriten.filterNot { it ==favorit }
+                        notifyDataSetChanged()
+                    }
+                    setNegativeButton("Abbrechen") { dialog, _ ->
+                        dialog.dismiss()
+                    }
                 }
-                teamCrest2NextMatch.load(viewModel.nextMatch.value!!.team2.teamIconUrl)
-                teamName2NextMatch.text = viewModel.nextMatch.value!!.team2.teamName
+                alertDialogBuilder.create().show()
+                true
             }
         }
     }
-
 }

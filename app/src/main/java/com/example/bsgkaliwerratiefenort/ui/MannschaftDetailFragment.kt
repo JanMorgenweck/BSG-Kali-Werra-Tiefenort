@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
+import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.MyViewModel
 import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
 import com.example.kaliwerra.data.Datasource
 
@@ -22,7 +22,7 @@ class MannschaftDetailFragment:Fragment() {
 
     private lateinit var binding: FragmentDetailMannschaftBinding
     var datasource = Datasource().loadMannschaften()
-    private val viewModel: MyViewModel by activityViewModels()
+    private val viewModel: FirebaseViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -90,7 +90,7 @@ class MannschaftDetailFragment:Fragment() {
 
         binding.tvFavoriten.setOnClickListener {
             var datasource = Datasource().loadMannschaften()
-            viewModel.saveFavorite(datasource[position])
+            viewModel.addFavorite(datasource[position])
         }
     }
     private fun showPopupMenu(){
