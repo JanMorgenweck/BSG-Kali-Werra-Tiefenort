@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.data.model.Profile
 import com.example.bsgkaliwerratiefenort.data.repo.Repository
 import com.example.bsgkaliwerratiefenort.remote.Api
@@ -19,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.launch
 
-class FirebaseViewModel : ViewModel() {
+class FirebaseViewModel() : ViewModel() {
 
 
     private val firebaseAuth = FirebaseAuth.getInstance()
@@ -138,7 +137,6 @@ class FirebaseViewModel : ViewModel() {
     val nextMatch = repository.nextMatch
 
 
-
     fun loadMannschaften(leagueShortcut:String,leagueSeason: Int){
         viewModelScope.launch {
             repository.getMannschaften(leagueShortcut,leagueSeason)
@@ -162,6 +160,9 @@ class FirebaseViewModel : ViewModel() {
     private var _favoriteTeam = MutableLiveData<MutableList<Mannschaft>>(mutableListOf())
     val favoriteTeam: LiveData<MutableList<Mannschaft>>
         get() = _favoriteTeam
+
+
+
 
     fun addFavorite(mannschaft: Mannschaft) {
         viewModelScope.launch {
@@ -231,6 +232,5 @@ class FirebaseViewModel : ViewModel() {
         // Aktualisiere die LiveData-Variable favoriteTeam mit den Favoriten
         _favoriteTeam.value = favoriteMannschaften
     }
-
 }
 

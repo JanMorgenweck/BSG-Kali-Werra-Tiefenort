@@ -6,10 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
 import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.remote.Api
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
-class Repository(private val apiService: Api) {
+class Repository(private val apiService: Api
+) {
 
     private var _mannschaften = MutableLiveData<List<MannschaftAPI>>()
     val mannschaften: LiveData<List<MannschaftAPI>>
@@ -53,9 +52,5 @@ class Repository(private val apiService: Api) {
             Log.e("TAG", "Kein laden möglich $e")
         }
     }
-
-
-
-
 
 }

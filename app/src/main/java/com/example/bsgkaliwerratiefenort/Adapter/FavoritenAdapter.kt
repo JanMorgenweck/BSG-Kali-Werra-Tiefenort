@@ -55,8 +55,8 @@ class FavoritenAdapter(
                     teamCrest2NextMatch.load(match.team2.teamIconUrl)
                     teamName2NextMatch.text = match.team2.teamName
 
+                }
             }
-         }
             holder.binding.clFavorite.setOnLongClickListener {
                 val alertDialogBuilder = AlertDialog.Builder(holder.itemView.context)
                 alertDialogBuilder.apply {

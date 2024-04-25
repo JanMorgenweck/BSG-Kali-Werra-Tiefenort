@@ -97,9 +97,6 @@ class MannschaftDetailFragment:Fragment() {
         val popupMenu = PopupMenu(requireContext(),binding.ivMenu)
         popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
 
-
-
-
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId){
                 R.id.action_startseite -> {
