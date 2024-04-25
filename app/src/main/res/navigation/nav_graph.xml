@@ -101,13 +101,13 @@
         android:label="fragment_neuigkeiten"
         tools:layout="@layout/fragment_neuigkeiten" />
     <fragment
-        android:id="@+id/sponsorenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.SponsorenFragment"
-        android:label="fragment_sponsoren"
-        tools:layout="@layout/fragment_sponsoren" />
-    <fragment
         android:id="@+id/ueberUnsFragment"
         android:name="com.example.bsgkaliwerratiefenort.ui.UeberUnsFragment"
         android:label="fragment_ueber_uns"
         tools:layout="@layout/fragment_ueber_uns" />
+    <fragment
+        android:id="@+id/sponsorenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.SponsorenFragment"
+        android:label="fragment_sponsoren"
+        tools:layout="@layout/fragment_sponsoren" />
 </navigation>

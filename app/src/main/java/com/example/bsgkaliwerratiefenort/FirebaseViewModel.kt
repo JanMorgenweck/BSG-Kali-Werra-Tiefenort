@@ -23,12 +23,19 @@ class FirebaseViewModel() : ViewModel() {
 
     private val firebaseAuth = FirebaseAuth.getInstance()
 
-
     private val fireStore = FirebaseFirestore.getInstance()
 
-
     private val storage: FirebaseStorage = FirebaseStorage.getInstance()
+
     private val storageRef = storage.reference
+
+    private val repository = Repository(Api)
+
+    val mannschaften = repository.mannschaften
+
+    val lastMatch = repository.lastMatch
+
+    val nextMatch = repository.nextMatch
 
 
     private var _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
@@ -128,13 +135,7 @@ class FirebaseViewModel() : ViewModel() {
         _currentUser.value = firebaseAuth.currentUser
     }
 
-    private val repository = Repository(Api)
 
-    val mannschaften = repository.mannschaften
-
-    val lastMatch = repository.lastMatch
-
-    val nextMatch = repository.nextMatch
 
 
     fun loadMannschaften(leagueShortcut:String,leagueSeason: Int){
