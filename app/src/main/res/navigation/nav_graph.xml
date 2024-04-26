@@ -110,4 +110,9 @@
         android:name="com.example.bsgkaliwerratiefenort.ui.SponsorenFragment"
         android:label="fragment_sponsoren"
         tools:layout="@layout/fragment_sponsoren" />
+    <fragment
+        android:id="@+id/datenschutzFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.DatenschutzFragment"
+        android:label="fragment_datenschutz"
+        tools:layout="@layout/fragment_datenschutz" />
 </navigation>

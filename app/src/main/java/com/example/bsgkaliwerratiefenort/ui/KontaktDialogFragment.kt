@@ -111,8 +111,8 @@ class KontaktDialogFragment : DialogFragment() {
         binding.ivAnfahrt.load(imageURL)
 
 
-//        val imageUrl = "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Von-der-Bahn-ins-Kaffeetälchen.jpg?alt=media&token=7f903274-3a58-4218-8665-522eda5b4820"
-//        binding.ivAnfahrtBahn.load(imageUrl)
+        val imageUrl = "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Von-der-Bahn-ins-Kaffeetaelchen.jpg?alt=media&token=ba0ddec0-5140-4409-90be-a892a87ae850"
+        binding.ivAnfahrtBahn.load(imageUrl)
 
         binding.btnClose.setOnClickListener {
             dismiss()

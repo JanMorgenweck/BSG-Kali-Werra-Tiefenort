@@ -203,7 +203,6 @@
             android:layout_width="209dp"
             android:layout_height="147dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/von_der_bahn_ins_kaffeet_lchen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAnfahrtBahn" />

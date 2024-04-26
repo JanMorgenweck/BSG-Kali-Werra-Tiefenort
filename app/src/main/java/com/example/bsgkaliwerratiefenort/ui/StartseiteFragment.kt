@@ -100,6 +100,7 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.datenschutz.setOnClickListener {
+            showDialogDatenschutz()
 
         }
 
@@ -112,6 +113,10 @@ class StartseiteFragment : Fragment() {
         }
     }
 
+    private fun showDialogDatenschutz(){
+        val dialog = DatenschutzFragment.newInstance()
+        dialog.show(childFragmentManager,"DatenschutzFragment")
+    }
     private fun showDialogKontakte() {
         val dialog = KontaktDialogFragment.newInstance()
         dialog.show(childFragmentManager, "KontaktDialogFragment")
