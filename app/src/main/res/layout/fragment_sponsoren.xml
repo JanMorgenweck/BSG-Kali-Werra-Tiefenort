@@ -90,6 +90,7 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="@string/sponsoren_partner"
+                android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"

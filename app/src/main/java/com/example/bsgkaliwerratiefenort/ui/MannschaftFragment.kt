@@ -33,8 +33,6 @@ class MannschaftFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.logoToolbar.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
-
         binding.recyclerView.adapter = MannschaftsAdapter(datasource)
 
         val originalText = getString(R.string.Mannschaften_Einleitung_Kurz)

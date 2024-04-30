@@ -82,7 +82,7 @@ class SponsorenFragment : Fragment() {
         binding.ivAlternativeEnergien.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Sponsoren%2FAlternative-Energien.jpg?alt=media&token=5e2f37b2-3196-4065-9ab8-fc72c9a56934")
         binding.ivIntersportSauer.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Sponsoren%2FIntersport-Sauer.jpg?alt=media&token=64056183-ce2d-4404-acab-cc92698ae4ef")
         binding.ivJako.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Sponsoren%2FJako.jpg?alt=media&token=6f8f540d-4f4a-43d8-ada4-be1025ab43f8")
-
+        binding.ivGroundBloggerMissGermany.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Bild-Groundblogging-x-Miss-Germany.jpg?alt=media&token=1ec550da-126c-433b-8fe0-a9012babbba5")
 
         binding.btnSenden.setOnClickListener {
 

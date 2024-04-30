@@ -65,8 +65,36 @@
             tools:ignore="TouchTargetSizeCheck" />
 
 
+
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvNeuigkeiten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/neuigkeiten"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNeuigkeiten"
+        tools:listitem="@layout/neuigkeiten_item"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

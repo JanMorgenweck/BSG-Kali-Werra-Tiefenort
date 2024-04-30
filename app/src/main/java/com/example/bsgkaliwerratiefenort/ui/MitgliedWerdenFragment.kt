@@ -20,7 +20,7 @@ import java.util.Calendar
 class MitgliedWerdenFragment : Fragment() {
 
     private lateinit var binding: FragmentMitgliedWerdenBinding
-    private val mannschaften = arrayOf("G-Junioren", "F-Junioren", "E-Junioren", "E-Juniorinnen","D-Junioren", "C-Junioren", "B-Junioren", "A-Junioren", "Herren", "Alte Herren", "Passiv")
+    private val mannschaften = arrayOf("    G-Junioren", "F-Junioren", "E-Junioren", "E-Juniorinnen","D-Junioren", "C-Junioren", "B-Junioren", "A-Junioren", "Herren", "Alte Herren", "Passiv")
 
 
     override fun onCreateView(
