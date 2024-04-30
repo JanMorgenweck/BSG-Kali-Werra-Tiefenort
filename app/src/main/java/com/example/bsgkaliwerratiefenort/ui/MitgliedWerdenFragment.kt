@@ -20,8 +20,8 @@ import java.util.Calendar
 class MitgliedWerdenFragment : Fragment() {
 
     private lateinit var binding: FragmentMitgliedWerdenBinding
-    private val mannschaften = arrayOf("    G-Junioren", "F-Junioren", "E-Junioren", "E-Juniorinnen","D-Junioren", "C-Junioren", "B-Junioren", "A-Junioren", "Herren", "Alte Herren", "Passiv")
 
+    private val mannschaften = arrayOf("    G-Junioren","    F-Junioren", "    E-Junioren", "    E-Juniorinnen","    D-Junioren", "    C-Junioren", "    B-Junioren", "    A-Junioren", "    Herren", "    Alte Herren", "    Passiv")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -239,7 +239,7 @@ class MitgliedWerdenFragment : Fragment() {
         val day = calender.get(Calendar.DAY_OF_MONTH)
 
         val datePickerDialog = DatePickerDialog(requireContext(),{ _, year, month, dayOfMonth ->
-        val selectedDate = "$dayOfMonth/${month +1 }/$year"
+        val selectedDate = "    $dayOfMonth/${month +1 }/$year"
             binding.tietGeburtsdatum.text = selectedDate
         }, year,month,day)
 
