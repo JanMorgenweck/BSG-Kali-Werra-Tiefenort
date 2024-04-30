@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.SponsorenFragment">
 
     <ImageView
@@ -66,5 +66,674 @@
 
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvSponsoren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/sponsoren_partner"
+                android:textSize="32sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWirBedankenUns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/wir_bedanken_uns"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSponsoren" />
+
+            <TextView
+                android:id="@+id/tvHauptsponsoren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/hauptsponsor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWirBedankenUns"/>
+
+            <ImageView
+                android:id="@+id/ivGEWOG"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHauptsponsoren"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvPremiumSponsoren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/premium_sponsoren"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGEWOG"/>
+
+            <ImageView
+                android:id="@+id/ivKrug"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPremiumSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivBeck"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivKrug"
+                app:layout_constraintEnd_toStartOf="@id/ivMSN"
+                app:layout_constraintTop_toBottomOf="@id/tvPremiumSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivMSN"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPremiumSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivKrugIffland"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivKrug"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivSimon"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivKrugIffland"
+                app:layout_constraintEnd_toStartOf="@id/ivLVM"
+                app:layout_constraintTop_toBottomOf="@id/ivKrug"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivLVM"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMSN"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivCarunion"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivSimon"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvOffizellePartner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/offizelle_partner"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivCarunion"/>
+
+            <ImageView
+                android:id="@+id/ivFahrradEyring"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOffizellePartner"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivTEAG"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivFahrradEyring"
+                app:layout_constraintEnd_toStartOf="@id/ivTechnicum"
+                app:layout_constraintTop_toBottomOf="@id/tvOffizellePartner"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivTechnicum"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOffizellePartner"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivMetallbau"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivTEAG"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvWebSponsoren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/web_sponsoren"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMetallbau"/>
+
+            <ImageView
+                android:id="@+id/ivWallnusshof"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWebSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivLandhandel"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivWallnusshof"
+                app:layout_constraintEnd_toStartOf="@id/ivPhysiotherapie"
+                app:layout_constraintTop_toBottomOf="@id/tvWebSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivPhysiotherapie"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWebSponsoren"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvBandenwerbung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/bandenwerbung"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivWallnusshof"/>
+
+            <ImageView
+                android:id="@+id/ivAdler"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBandenwerbung"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivPfau"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivAdler"
+                app:layout_constraintEnd_toStartOf="@id/ivGroundBlogger"
+                app:layout_constraintTop_toBottomOf="@id/tvBandenwerbung"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivGroundBlogger"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBandenwerbung"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivKomposta"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAdler"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivLehmann"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivKomposta"
+                app:layout_constraintEnd_toStartOf="@id/ivMarcoLinss"
+                app:layout_constraintTop_toBottomOf="@id/ivAdler"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivMarcoLinss"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAdler"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivMueller"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMarcoLinss"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivKathrinRexroth"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivMueller"
+                app:layout_constraintEnd_toStartOf="@id/ivReboConsult"
+                app:layout_constraintTop_toBottomOf="@id/ivMarcoLinss"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivReboConsult"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivMarcoLinss"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivTiefbau"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivReboConsult"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivVRBank"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivTiefbau"
+                app:layout_constraintEnd_toStartOf="@id/ivHessCarunion"
+                app:layout_constraintTop_toBottomOf="@id/ivReboConsult"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivHessCarunion"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivReboConsult"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivElektroHossfeld"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivHessCarunion"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivRhoenerEismanufaktur"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivElektroHossfeld"
+                app:layout_constraintEnd_toStartOf="@id/ivFlamingoDoener"
+                app:layout_constraintTop_toBottomOf="@id/ivHessCarunion"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivFlamingoDoener"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivHessCarunion"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvForederer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/f_rderer"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFlamingoDoener"/>
+
+            <ImageView
+                android:id="@+id/ivAutohausBreitungen"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvForederer"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivBosporus"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@id/ivAutohausBreitungen"
+                app:layout_constraintEnd_toStartOf="@id/ivGasthausErholung"
+                app:layout_constraintTop_toBottomOf="@id/tvForederer"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivGasthausErholung"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvForederer"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/ivGeruestverleih"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGasthausErholung"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivAlternativeEnergien"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivGasthausErholung"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvAusrüster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ausr_ster"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAlternativeEnergien"/>
+
+            <ImageView
+                android:id="@+id/ivIntersportSauer"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAusrüster"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageView
+                android:id="@+id/ivJako"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAusrüster"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvSieSuchen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/sie_suchen_nach"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivJako" />
+
+            <TextView
+                android:id="@+id/tvDannSindSie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/dann_sind_sie"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSieSuchen" />
+
+            <ImageView
+                android:id="@+id/ivGroundBloggerMissGermany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                tools:src="@tools:sample/avatars"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDannSindSie"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivGroundBloggerMissGermany">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelefon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietTelefon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/telefon"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNachricht"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilTelefon">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietNachricht"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/nachricht" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/Datenschutzerklärung"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilNachricht" />
+
+            <Button
+                android:id="@+id/btnSenden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/senden"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
