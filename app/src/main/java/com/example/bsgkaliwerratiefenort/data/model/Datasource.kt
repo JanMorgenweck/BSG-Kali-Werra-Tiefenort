@@ -20,9 +20,9 @@ class Datasource {
                 "kali-werra-tiefenort@outlook.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/011MIAF2K0000000VTVG0001VTR8C1K7#!/",
-                "",
+                "KLST2H1",
                 2023,
-                0,
+                4730,
                 6311
 
             ),
@@ -55,9 +55,9 @@ class Datasource {
                 "kali-werra-tiefenort@outlook.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/mannschaft/sg-fsv-kali-werra-tiefenort-fsv-kali-werra-tiefenort-thueringen/-/saison/2324/team-id/011MIBOG34000000VTVG0001VTR8C1K7#!/",
-                "",
+                "KLAHST1",
                 2023,
-                0,
+                4729,
                 6311
             ),
             Mannschaft(
@@ -267,6 +267,30 @@ class Datasource {
 
         val news = mutableListOf(
 
+            News(
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/news%2FNeuesGreenkeeperTeam_Anton-Julius-Lennert.jpg?alt=media&token=a8710ad8-b7a4-40ba-8652-8f25cafa8f28",
+                "UNSER GREENKEEPER-TEAM VON MORGEN",
+                "30.April 2023",
+                "Es freut uns immer sehr, wenn helfende Hände bei der Instandhaltung des großflächigen Areals im Waldstadion Kaffeetälchen mit anpacken. Noch schöner ist es, wenn neben den paar gewohnten Gesicherten auch ",
+                "Es freut uns immer sehr, wenn helfende Hände bei der Instandhaltung des großflächigen Areals im Waldstadion Kaffeetälchen mit anpacken. Noch schöner ist es, wenn neben den paar gewohnten Gesicherten auch einmal junge Leute unterstützen und Verantwortung im Verein übernehmen wollen.\n" +
+                        "\n" +
+                        "Mit Anton, Julius und Lennert haben wir gleich drei Jungs, die nun regelmäßig beim Vorbereiten unserer Rasenfläche für die richtige Linie sorgen werden. Wir finden euer Engagement großartig! Super, dass ihr dabei seid, Jungs!\n" +
+                        "\n" +
+                        "Wer jetzt spontan Lust bekommen hat, ebenfalls in unserem Verein mit anzupacken, nur zu! Wir freuen uns über jede Beteiligung – Projekte gibt es nämlich genug.\n"
+            ),
+            News(
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/news%2FB-Junioren.jpg?alt=media&token=356dc37e-9731-4a18-a96f-65d788d0ed4c",
+                "KNAPPE NIEDERLAGE IM SPIETZENSPIEL - FÜNFTER SIEG IN SERIE",
+                "30.April 2024",
+                "Am Sonntagvormittag war es soweit: Kali Werra empfing die SG SV Venus 1920 Weilar zum Spitzenspiel der B-Junioren Kreisliga Staffel 2. Bei sommerlichen Temperaturen fanden über 100 Zuschauer den Weg ",
+                "Am Sonntagvormittag war es soweit: Kali Werra empfing die SG SV Venus 1920 Weilar zum Spitzenspiel der B-Junioren Kreisliga Staffel 2. Bei sommerlichen Temperaturen fanden über 100 Zuschauer den Weg ins Waldstadion Kaffeetälchen. Und sie sollten es nicht bereuen. Beide Mannschaften lieferten sich in einem spannenden und torreichen Fußballspiel mit großartiger Stimmung auf den Tribünen einen echtes Duell auf Augenhöhe – leider mit dem besseren Ende für die Gäste aus der Rhön. Trotz des zwischenzeitlichen 1:4-Rückstands gaben sich unsere Jungs nicht auf und kamen auf 3:4 zurück. Mit ein wenig mehr Spielglück hätte es beinahe noch für ein Remis gereicht. Nichtsdestotrotz ein großes Kompliment an die Mannschaft für ihren unermüdlichen Einsatz, der auch noch nach Abpfiff mit Applaus und aufmunternden Worten von den Rängen gewürdigt wurde. Kopf hoch und weiter geht’s, Jungs!\n" +
+                        "\n" +
+                        "Tore für Kali Werra: Pepe Troppa, Marek Borrs und Anton Krug\n" +
+                        "\n" +
+                        "Weniger torreich aber dafür mit drei wichtigen Punkten im Gepäck kehrte unsere 1. Mannschaft von ihrer Auswärtsreise bei der SG SV Eintracht Ifta e.V. II zurück. In dem erwartet schwierigen Spiel brachte Erik Limpert die Kali-Elf in Führung. Die daraufhin aktiver agierenden Hausherren kamen zu Beginn des zweiten Durchgangs zum nicht unverdienten 1:1-Ausgleich. Im weiteren Verlauf wurde das Spiel zunehmend kampfbetonter. In der Schlussphase bewies Kali-Coach Pierre Cravaack das goldene Händchen und wechselte mit Nico Trautmann den Siegtorschützen zum 2:1-Endstand ein. Somit steht der fünfte Sieg in Serie. Wahnsinn, wer hätte das zum Ende der Hinrunde wohl gedacht?! Trotzdem zählt weiterhin jeder Punkt für den Klassenerhalt.\n" +
+                        "\n" +
+                        "Natürlich gab es noch mehr fußballerische Höhepunkte an diesem Wochenende. Ein Kantersieg der C-Junioren und ein 6-Punkte-Spektakel der D1-Junioren sind nur zwei davon. Den gesamten Rückblick zum Spieltag gibt es dann wie gewohnt in den nächsten Tagen mit unseren Ergebnis-Übersichten."
+            ),
             News(
                 "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/news%2FVorschau-HEIM-B-J._KaliWerra-Weilar_28.04.24.jpg?alt=media&token=54536665-5461-4970-aba1-31a4ac053aac",
                 "SPITZENSPIEL UM DEN STAFFELSIEG",
