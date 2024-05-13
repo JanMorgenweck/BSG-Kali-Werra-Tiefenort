@@ -26,7 +26,7 @@ class FavoritenFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       binding = FragmentFavoritenBinding.inflate(inflater,container,false)
+        binding = FragmentFavoritenBinding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -38,8 +38,9 @@ class FavoritenFragment : Fragment() {
         viewModel.favoriteTeam.observe(viewLifecycleOwner){
             val adapter = FavoritenAdapter(it, viewModel, viewLifecycleOwner)
             binding.rvFavoriten.adapter = adapter
+            viewModel.favoritenListe(it)
         }
-        viewModel.loadFavoritesFromFirebase()
+
 
 
 

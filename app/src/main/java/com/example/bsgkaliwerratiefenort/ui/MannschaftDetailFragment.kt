@@ -91,6 +91,7 @@ class MannschaftDetailFragment:Fragment() {
         binding.tvFavoriten.setOnClickListener {
             var datasource = Datasource().loadMannschaften()
             viewModel.addFavorite(datasource[position])
+            Toast.makeText(requireContext(),"hinzugefügt", Toast.LENGTH_SHORT).show()
         }
     }
     private fun showPopupMenu(){

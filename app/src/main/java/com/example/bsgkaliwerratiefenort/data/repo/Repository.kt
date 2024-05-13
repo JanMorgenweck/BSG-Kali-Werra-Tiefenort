@@ -53,4 +53,14 @@ class Repository(private val apiService: Api
         }
     }
 
+    suspend fun fetchNextMatch(leagueId: Int,teamId: Int): Match? {
+        try {
+            val result = apiService.retrofitService.getNextMatch(leagueId, teamId)
+            return result
+        } catch (e: Exception) {
+            Log.e("TAG", "Kein laden möglich $e")
+        }
+        return null
+    }
+
 }

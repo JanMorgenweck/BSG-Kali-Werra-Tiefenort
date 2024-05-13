@@ -33,6 +33,8 @@ class FavoritenAdapter(
     override fun onBindViewHolder(holder: FavoritenViewHolder, position: Int) {
         val favorit = favoriten[position]
 
+        viewModel.loadMatchesForLeague(favorit.leagueId)
+
         with(holder.binding) {
             tvMannschaftsName.text = favorit.name
 

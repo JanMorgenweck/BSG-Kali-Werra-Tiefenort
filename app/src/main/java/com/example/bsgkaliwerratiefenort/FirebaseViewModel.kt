@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.data.model.Profile
 import com.example.bsgkaliwerratiefenort.data.repo.Repository
 import com.example.bsgkaliwerratiefenort.remote.Api
@@ -16,26 +17,22 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class FirebaseViewModel() : ViewModel() {
 
 
     private val firebaseAuth = FirebaseAuth.getInstance()
 
+
     private val fireStore = FirebaseFirestore.getInstance()
 
+
     private val storage: FirebaseStorage = FirebaseStorage.getInstance()
-
     private val storageRef = storage.reference
-
-    private val repository = Repository(Api)
-
-    val mannschaften = repository.mannschaften
-
-    val lastMatch = repository.lastMatch
-
-    val nextMatch = repository.nextMatch
 
 
     private var _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
@@ -135,7 +132,13 @@ class FirebaseViewModel() : ViewModel() {
         _currentUser.value = firebaseAuth.currentUser
     }
 
+    private val repository = Repository(Api)
 
+    val mannschaften = repository.mannschaften
+
+    val lastMatch = repository.lastMatch
+
+    val nextMatch = repository.nextMatch
 
 
     fun loadMannschaften(leagueShortcut:String,leagueSeason: Int){
@@ -158,6 +161,17 @@ class FirebaseViewModel() : ViewModel() {
         }
     }
 
+
+    fun fetchNextMatch(leagueId: Int,teamId: Int): Match? {
+        var result: Match? = null
+    viewModelScope.launch{
+          result = repository.fetchNextMatch(leagueId, teamId)
+        }
+        Log.d("Result", "$result")
+        return result
+    }
+
+
     private var _favoriteTeam = MutableLiveData<MutableList<Mannschaft>>(mutableListOf())
     val favoriteTeam: LiveData<MutableList<Mannschaft>>
         get() = _favoriteTeam
@@ -171,7 +185,7 @@ class FirebaseViewModel() : ViewModel() {
             _favoriteTeam.value?.add(mannschaft)
             Log.e("TAG", _favoriteTeam.value.toString())
             // Aktualisieren Sie das Firebase-Profil des Benutzers
-           updateFavorites(_favoriteTeam.value ?: mutableListOf())
+            updateFavorites(_favoriteTeam.value ?: mutableListOf())
         }
     }
 
@@ -206,32 +220,47 @@ class FirebaseViewModel() : ViewModel() {
                     if(document.exists()){
                         val favorites = document.data?.get("favorites") as? List<String>
                         favorites?.let { processFavorites(it) }
-                }else{
-                    Log.e("FirebaseViewModel", "User document not found")
+                    }else{
+                        Log.e("FirebaseViewModel", "User document not found")
                     }
-        }
+                }
                 .addOnFailureListener{ e ->
                     Log.e("FirebaseViewModel", "Error loading favorites: $e")
                 }
         }
     }
 
+    fun favoritenListe(favorites: List<Mannschaft>){
+        for (favorite in favorites){
+            fetchNextMatch(favorite.leagueId, favorite.teamId)
+
+        }
+    }
     private fun processFavorites(favorites: List<String>) {
         val favoriteMannschaften = mutableListOf<Mannschaft>()
 
-        // Annahme: Du hast eine Liste aller Mannschaften, aus der du die Favoriten extrahieren kannst
+
         val datasource = Datasource()
-        val allMannschaften: List<Mannschaft> = datasource.loadMannschaften() // Hier erhältst du die Liste aller Mannschaften, z. B. aus deinem Repository
+        val allMannschaften: List<Mannschaft> = datasource.loadMannschaften()
 
-            // Durchgehe die Liste aller Mannschaften und überprüfe, ob sie in den Favoriten enthalten sind
-            for (mannschaft in allMannschaften) {
-                if (favorites.contains(mannschaft.name)) {
-                    favoriteMannschaften.add(mannschaft)
-                }
+        for (mannschaft in allMannschaften) {
+            if (favorites.contains(mannschaft.name)) {
+                favoriteMannschaften.add(mannschaft)
             }
-
-        // Aktualisiere die LiveData-Variable favoriteTeam mit den Favoriten
+        }
         _favoriteTeam.value = favoriteMannschaften
     }
-}
 
+    fun loadMatchesForLeague(leagueId: Int) {
+        viewModelScope.launch {
+            // Filtern Sie die Favoriten-Mannschaften basierend auf der Liga-ID
+            val favoriteTeamsForLeague = _favoriteTeam.value?.filter { it.leagueId == leagueId }
+            // Iterieren Sie durch die favorisierten Mannschaften und laden Sie Spiele für jede Mannschaft
+            favoriteTeamsForLeague?.forEach { team ->
+                loadNextMatch(team.leagueId, team.teamId)
+                loadLastMatch(team.leagueId, team.teamId)
+            }
+        }
+    }
+
+}
