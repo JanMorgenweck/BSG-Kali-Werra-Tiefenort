@@ -87,12 +87,6 @@ class MannschaftDetailFragment:Fragment() {
         binding.ivMenu.setOnClickListener {
             showPopupMenu()
         }
-
-        binding.tvFavoriten.setOnClickListener {
-            var datasource = Datasource().loadMannschaften()
-            viewModel.addFavorite(datasource[position])
-            Toast.makeText(requireContext(),"hinzugefügt", Toast.LENGTH_SHORT).show()
-        }
     }
     private fun showPopupMenu(){
         val popupMenu = PopupMenu(requireContext(),binding.ivMenu)
@@ -134,10 +128,7 @@ class MannschaftDetailFragment:Fragment() {
                     findNavController().navigate(R.id.profilFragment)
                     true
                 }
-                R.id.action_favoriten -> {
-                    findNavController().navigate(R.id.favoritenFragment)
-                    true
-                }
+
                 else -> false
             }
         }

@@ -91,11 +91,6 @@
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
     <fragment
-        android:id="@+id/favoritenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.FavoritenFragment"
-        android:label="fragment_favoriten"
-        tools:layout="@layout/fragment_favoriten" />
-    <fragment
         android:id="@+id/neuigkeitenFragment"
         android:name="com.example.bsgkaliwerratiefenort.ui.NeuigkeitenFragment"
         android:label="fragment_neuigkeiten"

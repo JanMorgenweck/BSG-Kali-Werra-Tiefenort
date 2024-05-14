@@ -203,10 +203,6 @@ class MitgliedWerdenFragment : Fragment() {
                     findNavController().navigate(R.id.profilFragment)
                     true
                 }
-                R.id.action_favoriten -> {
-                    findNavController().navigate(R.id.favoritenFragment)
-                    true
-                }
                 else -> false
             }
         }

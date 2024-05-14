@@ -35,9 +35,5 @@
         android:id="@+id/action_profil"
         android:title="@string/profil_account" />
 
-    <item
-        android:id="@+id/action_favoriten"
-        android:title="@string/favoriten"/>
-
 
 </menu>

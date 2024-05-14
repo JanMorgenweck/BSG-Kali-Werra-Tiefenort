@@ -34,8 +34,8 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
 
         val position = arguments?.getInt("position")
 
-        resetUI()
 
+        resetUI()
         viewModel.lastMatch.observe(viewLifecycleOwner) { match ->
             binding.tvDate.text = match.matchDateTime
             binding.teamCrest.load(match.team1.teamIconUrl)
@@ -109,10 +109,6 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
     private fun showPopupMenu(){
         val popupMenu = PopupMenu(requireContext(),binding.ivMenu)
         popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
-
-
-
-
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId){
                 R.id.action_startseite -> {
@@ -149,10 +145,7 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
                     findNavController().navigate(R.id.profilFragment)
                     true
                 }
-                R.id.action_favoriten -> {
-                    findNavController().navigate(R.id.favoritenFragment)
-                    true
-                }
+
                 else -> false
             }
         }
