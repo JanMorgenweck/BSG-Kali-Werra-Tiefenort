@@ -103,6 +103,15 @@ class VereinFragment : Fragment() {
         mediaController.setAnchorView(binding.vvKaliWerraLebt)
         binding.vvKaliWerraLebt.setMediaController(mediaController)
 
+        binding.ivStadionordnung.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Stadionordnung.jpg?alt=media&token=a0ab8cc4-0549-47e9-9b54-5646cbb030fe")
+        binding.ivStadionordnung.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://kali-werra.de/wp-content/uploads/2023/06/Stadionordnung-Waldstadion-Kaffeetaelchen.pdf")
+                )
+            )
+        }
     }
 
 
