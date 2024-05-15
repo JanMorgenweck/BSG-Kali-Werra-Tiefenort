@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.MediaController
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -18,6 +20,7 @@ import com.example.bsgkaliwerratiefenort.databinding.FragmentUeberUnsBinding
 class UeberUnsFragment : Fragment() {
 
     private lateinit var binding: FragmentUeberUnsBinding
+    private lateinit var mediaController: MediaController
 
 
     override fun onCreateView(
@@ -112,9 +115,54 @@ class UeberUnsFragment : Fragment() {
                 )
             )
         }
+
+        val videoUri =
+            Uri.parse("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Videos%2FKali%20Werra%20Tiefenort%20-%20Oldiespiel%20zur%20Jahrfeier%202012.mp4?alt=media&token=88d34e52-c334-42ea-9d0e-6122d33d150a")
+        binding.vvFundstueck.setVideoURI(videoUri)
+        mediaController = MediaController(requireContext())
+        mediaController.setAnchorView(binding.vvFundstueck)
+        binding.vvFundstueck.setMediaController(mediaController)
+
+        val params = FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT
+        )
+        params.setMargins(48, 48, 48, 48)
+        mediaController.layoutParams = params
+
+        val videoUri110Jahre =
+            Uri.parse("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Videos%2F110JahreKaliWerra.mp4?alt=media&token=f7692c30-4eb0-4548-b287-7fbe29d730a5")
+        binding.vv110Jahre.setVideoURI(videoUri110Jahre)
+        mediaController = MediaController(requireContext())
+        mediaController.setAnchorView(binding.vv110Jahre)
+        binding.vv110Jahre.setMediaController(mediaController)
+
+        val params1 = FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT
+        )
+        params1.setMargins(48, 48, 48, 0)
+        mediaController.layoutParams = params
+
+
+        val videoUriU17Bundesliga =
+            Uri.parse("https://58de7a369a9c4.streamlock.net/vod/_definst_/3q/videos/43/2024/04/a7782d002781ac71d9de259cc165d065bc930d3d.mp4/playlist.m3u8")
+        binding.vvBundesligaU17.setVideoURI(videoUriU17Bundesliga)
+        mediaController = MediaController(requireContext())
+        mediaController.setAnchorView(binding.vvBundesligaU17)
+        binding.vvBundesligaU17.setMediaController(mediaController)
+        val params2 = FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT
+        )
+        params2.setMargins(48, 48, 48, 48)
+        mediaController.layoutParams = params
+
+
         binding.arrowBack.setOnClickListener {
             findNavController().navigateUp()
         }
+
 
         binding.homeicon.setOnClickListener {
             findNavController().navigate(R.id.startseiteFragment)

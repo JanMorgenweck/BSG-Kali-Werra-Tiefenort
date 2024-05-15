@@ -46,6 +46,8 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
                 match.matchResults.firstOrNull { it.resultName == "Endergebnis" }?.pointsTeam2.toString()
             binding.teamName2.text = match.team2.teamName
             binding.teamCrest2.load(match.team2.teamIconUrl)
+            binding.tvSpielortStadion.text = match.location.locationStadium
+            binding.tvSpielort.text = match.location.locationCity
         }
 
         resetNextMatchUI()
@@ -69,6 +71,8 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
 
                 binding.teamName2NextMatch.text = match.team2.teamName
                 binding.teamCrest2NextMatch.load(match.team2.teamIconUrl)
+                binding.tvSpielortStadionNextMatch.text = match.location.locationStadium
+                binding.tvSpielortNextMatch.text = match.location.locationCity
         }
         binding.tvMannschaftsName.text = (activity as MainActivity).datasource[position!!].name
 

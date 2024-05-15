@@ -110,4 +110,9 @@
         android:name="com.example.bsgkaliwerratiefenort.ui.DatenschutzFragment"
         android:label="fragment_datenschutz"
         tools:layout="@layout/fragment_datenschutz" />
+    <fragment
+        android:id="@+id/ehrenamtStellenFragment"
+        android:name="com.example.bsgkaliwerratiefenort.ui.EhrenamtStellenFragment"
+        android:label="fragment_ehrenamt_stellen"
+        tools:layout="@layout/fragment_ehrenamt_stellen" />
 </navigation>

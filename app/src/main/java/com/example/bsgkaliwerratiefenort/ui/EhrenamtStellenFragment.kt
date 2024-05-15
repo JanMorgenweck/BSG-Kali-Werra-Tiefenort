@@ -1,48 +1,53 @@
 package com.example.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.MediaController
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import coil.load
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentVereinBinding
+import com.example.bsgkaliwerratiefenort.databinding.FragmentEhrenamtStellenBinding
 
-class VereinFragment : Fragment() {
 
-    private lateinit var binding: FragmentVereinBinding
-    private lateinit var mediaController: MediaController
+class EhrenamtStellenFragment : Fragment() {
+
+    private lateinit var binding: FragmentEhrenamtStellenBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentVereinBinding.inflate(inflater, container, false)
+        binding = FragmentEhrenamtStellenBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        binding.tvSB6.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://www.dfb.de/schiedsrichter/interessentin/artikel/wie-werde-ich-schiedsrichter-345/")
+                )
+            )
+        }
 
         binding.btnSenden.setOnClickListener {
             val name = binding.tietName.text.toString()
             val email = binding.tietEmail.text.toString()
+            val taetigkeit = binding.tietTaetigkeit.text.toString()
             val nachricht = binding.tietNachricht.text.toString()
 
             if (name.isNotBlank() &&
                 email.isNotBlank() &&
+                taetigkeit.isNotBlank() &&
                 nachricht.isNotBlank() &&
                 binding.checkBox.isChecked
             ) {
@@ -52,9 +57,8 @@ class VereinFragment : Fragment() {
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Nachricht von $name")
                 intent.putExtra(
                     Intent.EXTRA_TEXT,
-                    "Name: $name\nE-Mail: $email\nNachricht: $nachricht\nDatenschutzerklärung: check️"
+                    "Name: $name\nE-Mail: $email\nTätigkeit: $taetigkeit\nNachricht: $nachricht\nDatenschutzerklärung: check️"
                 )
-
 
                 if (intent.resolveActivity(requireActivity().packageManager) != null) {
                     startActivity(intent)
@@ -77,17 +81,11 @@ class VereinFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
         }
-
-
-        binding.llMitgliedWerden.setOnClickListener {
-            findNavController().navigate(R.id.mitgliedWerdenFragment)
-        }
-        binding.ivLogo.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
         binding.arrowBack.setOnClickListener {
             findNavController().navigateUp()
         }
+
 
         binding.homeicon.setOnClickListener {
             findNavController().navigate(R.id.startseiteFragment)
@@ -96,38 +94,7 @@ class VereinFragment : Fragment() {
         binding.ivMenu.setOnClickListener {
             showPopupMenu()
         }
-
-        val videoUri =
-            Uri.parse("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Videos%2F1715438602394.mp4?alt=media&token=568da80e-9697-41c7-918c-16a374732b8e")
-        binding.vvKaliWerraLebt.setVideoURI(videoUri)
-        mediaController = MediaController(requireContext())
-        mediaController.setAnchorView(binding.vvKaliWerraLebt)
-        binding.vvKaliWerraLebt.setMediaController(mediaController)
-        val params = FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        )
-        params.setMargins(48, 48, 48, 48)
-        mediaController.layoutParams = params
-
-        binding.ivStadionordnung.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Stadionordnung.jpg?alt=media&token=a0ab8cc4-0549-47e9-9b54-5646cbb030fe")
-        binding.ivStadionordnung.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://kali-werra.de/wp-content/uploads/2023/06/Stadionordnung-Waldstadion-Kaffeetaelchen.pdf")
-                )
-            )
-        }
-
-        binding.ivLogoEhrenamt.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
-        binding.llEhrenamt.setOnClickListener {
-            findNavController().navigate(R.id.ehrenamtStellenFragment)
-        }
     }
-
-
-
 
     private fun showPopupMenu() {
         val popupMenu = PopupMenu(requireContext(), binding.ivMenu)
@@ -175,10 +142,10 @@ class VereinFragment : Fragment() {
                     findNavController().navigate(R.id.profilFragment)
                     true
                 }
+
                 else -> false
             }
         }
         popupMenu.show()
     }
-
 }
