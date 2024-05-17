@@ -36,8 +36,12 @@ class VereinFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.svVerein.post {
+            binding.svVerein.scrollTo(0,0)
+        }
 
         (activity as MainActivity).binding.toolbar.isGone = false
+
         binding.btnSenden.setOnClickListener {
             val name = binding.tietName.text.toString()
             val email = binding.tietEmail.text.toString()

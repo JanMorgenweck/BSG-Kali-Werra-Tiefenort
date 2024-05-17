@@ -36,6 +36,10 @@ class UeberUnsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.svUeberUns.post {
+            binding.svUeberUns.scrollTo(0,0)
+        }
+
         binding.ivStadionUmbau1.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/bilderStadion%2FBild15-Kopie.jpg?alt=media&token=f810e9a0-5ba0-40cf-8788-f284a7785db0")
         binding.ivStadionUmbau1.setOnClickListener {
             startActivity(
