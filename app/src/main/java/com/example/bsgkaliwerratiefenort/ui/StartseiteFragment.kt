@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.FirebaseViewModel
+import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
 import com.example.bsgkaliwerratiefenort.databinding.FragmentStartseiteBinding
@@ -111,6 +113,8 @@ class StartseiteFragment : Fragment() {
         binding.ivMenu.setOnClickListener {
             showPopupMenu()
         }
+
+        (activity as MainActivity).binding.toolbar.isGone = true
     }
 
     private fun showDialogDatenschutz(){
@@ -130,9 +134,6 @@ class StartseiteFragment : Fragment() {
     private fun showPopupMenu(){
         val popupMenu = PopupMenu(requireContext(),binding.ivMenu)
         popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
-
-
-
 
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId){

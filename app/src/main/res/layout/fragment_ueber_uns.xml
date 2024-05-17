@@ -19,52 +19,6 @@
         app:layout_constraintVertical_bias="0.875"
         tools:ignore="ContentDescription" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingVertical="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageView
-            android:id="@+id/ivMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/menu_icon"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/arrow_back"
-            style="@style/imagebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
-
-        <ImageView
-            android:id="@+id/logoToolbar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/logo_bsg_kali_werra" />
-
-        <ImageView
-            android:id="@+id/homeicon"
-            style="@style/imagebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/icons8_home_24" />
-
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -72,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -274,16 +228,16 @@
                 android:id="@+id/tvFundstück"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fundst_ck_aus_2012"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:gravity="center"
+                android:text="@string/fundst_ck_aus_2012"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau9"/>
+                app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau9" />
 
             <FrameLayout
                 android:id="@+id/flFundstueck"
@@ -296,16 +250,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvFundstück">
 
-            <VideoView
-                android:id="@+id/vvFundstueck"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"/>
+                <VideoView
+                    android:id="@+id/vvFundstueck"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp" />
 
-        </FrameLayout>
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/tvQuelleYouTube"
@@ -315,24 +269,24 @@
                 android:layout_marginEnd="16dp"
                 android:text="@string/quelle_www_youtube_com"
                 android:textSize="11sp"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flFundstueck"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flFundstueck" />
 
             <TextView
                 android:id="@+id/tv110Jahre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/_110_jahre_kali_werra_tiefenort"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:gravity="center"
+                android:text="@string/_110_jahre_kali_werra_tiefenort"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvQuelleYouTube"/>
+                app:layout_constraintTop_toBottomOf="@id/tvQuelleYouTube" />
 
             <FrameLayout
                 android:id="@+id/fl110Jahre"
@@ -345,14 +299,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv110Jahre">
 
-            <VideoView
-                android:id="@+id/vv110Jahre"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"/>
+                <VideoView
+                    android:id="@+id/vv110Jahre"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp" />
 
             </FrameLayout>
 
@@ -360,16 +314,16 @@
                 android:id="@+id/tvBundesligaU17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ein_hauch_von_bundesliga"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:gravity="center"
+                android:text="@string/ein_hauch_von_bundesliga"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fl110Jahre"/>
+                app:layout_constraintTop_toBottomOf="@id/fl110Jahre" />
 
             <FrameLayout
                 android:id="@+id/flBundesligaU17"
@@ -381,14 +335,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBundesligaU17">
-            <VideoView
-                android:id="@+id/vvBundesligaU17"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"/>
+
+                <VideoView
+                    android:id="@+id/vvBundesligaU17"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp" />
 
             </FrameLayout>
 
@@ -401,10 +356,10 @@
                 android:layout_marginBottom="16dp"
                 android:text="@string/quelle_https_www_srf_online_de"
                 android:textSize="11sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flBundesligaU17"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flBundesligaU17" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

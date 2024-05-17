@@ -11,9 +11,11 @@ import android.widget.FrameLayout
 import android.widget.MediaController
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import coil.load
+import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentVereinBinding
 
@@ -35,7 +37,7 @@ class VereinFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
+        (activity as MainActivity).binding.toolbar.isGone = false
         binding.btnSenden.setOnClickListener {
             val name = binding.tietName.text.toString()
             val email = binding.tietEmail.text.toString()
@@ -79,23 +81,11 @@ class VereinFragment : Fragment() {
             }
 
         }
-
-
+        binding.ivLogo.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
         binding.llMitgliedWerden.setOnClickListener {
             findNavController().navigate(R.id.mitgliedWerdenFragment)
         }
-        binding.ivLogo.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
-        binding.arrowBack.setOnClickListener {
-            findNavController().navigateUp()
-        }
 
-        binding.homeicon.setOnClickListener {
-            findNavController().navigate(R.id.startseiteFragment)
-        }
-
-        binding.ivMenu.setOnClickListener {
-            showPopupMenu()
-        }
 
         val videoUri =
             Uri.parse("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Videos%2F1715438602394.mp4?alt=media&token=568da80e-9697-41c7-918c-16a374732b8e")
@@ -120,65 +110,9 @@ class VereinFragment : Fragment() {
             )
         }
 
-        binding.ivLogoEhrenamt.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
-        binding.llEhrenamt.setOnClickListener {
+
+        binding.tvEhrenamt.setOnClickListener {
             findNavController().navigate(R.id.ehrenamtStellenFragment)
         }
     }
-
-
-
-
-    private fun showPopupMenu() {
-        val popupMenu = PopupMenu(requireContext(), binding.ivMenu)
-        popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
-
-        popupMenu.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.action_startseite -> {
-                    findNavController().navigate(R.id.startseiteFragment)
-                    true
-                }
-
-                R.id.action_Neuigkeiten -> {
-                    findNavController().navigate(R.id.neuigkeitenFragment)
-                    true
-                }
-
-                R.id.action_verein -> {
-                    findNavController().navigate(R.id.vereinFragment)
-                    true
-                }
-
-                R.id.action_manschaften -> {
-                    findNavController().navigate(R.id.mannschaftFragment)
-                    true
-                }
-
-                R.id.action_ueberUns -> {
-                    findNavController().navigate(R.id.ueberUnsFragment)
-                    true
-                }
-
-                R.id.action_sponsorenPartner -> {
-                    findNavController().navigate(R.id.sponsorenFragment)
-                    true
-                }
-
-                R.id.action_onlineShop -> {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://kali-werra-shop.de"))
-                    startActivity(intent)
-                    true
-                }
-
-                R.id.action_profil -> {
-                    findNavController().navigate(R.id.profilFragment)
-                    true
-                }
-                else -> false
-            }
-        }
-        popupMenu.show()
-    }
-
 }
