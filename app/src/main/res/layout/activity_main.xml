@@ -31,9 +31,9 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
 
             <ImageView
@@ -50,13 +50,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
-                android:contentDescription="text"
+                android:contentDescription="@string/bob"
                 app:srcCompat="@drawable/baseline_arrow_back_24"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:id="@+id/logoToolbar"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/logo_bsg_kali_werra" />
@@ -66,9 +66,9 @@
                 style="@style/imagebutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
+                android:layout_marginEnd="28dp"
                 android:backgroundTint="#00FFFFFF"
-                android:contentDescription="text"
+                android:contentDescription="@string/bob"
                 app:srcCompat="@drawable/icons8_home_24"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
