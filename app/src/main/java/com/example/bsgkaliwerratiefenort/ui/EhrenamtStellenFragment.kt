@@ -6,20 +6,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentEhrenamtStellenBinding
-
 
 class EhrenamtStellenFragment : Fragment() {
 
     private lateinit var binding: FragmentEhrenamtStellenBinding
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,6 +50,12 @@ class EhrenamtStellenFragment : Fragment() {
                 nachricht.isNotBlank() &&
                 binding.checkBox.isChecked
             ) {
+                // Validate email
+                if (!email.contains("@")) {
+                    Toast.makeText(requireContext(), "Bitte geben Sie eine gültige E-Mail-Adresse ein.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/plain"
                 intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("janmorgenweck@hotmail.com"))
@@ -68,6 +69,7 @@ class EhrenamtStellenFragment : Fragment() {
                     startActivity(intent)
                     binding.tietName.text!!.clear()
                     binding.tietEmail.text!!.clear()
+                    binding.tietTaetigkeit.text!!.clear()
                     binding.tietNachricht.text!!.clear()
                     binding.checkBox.isChecked = false
 
@@ -87,5 +89,4 @@ class EhrenamtStellenFragment : Fragment() {
             }
         }
     }
-
 }

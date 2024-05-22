@@ -86,6 +86,11 @@ class SponsorenFragment : Fragment() {
                 nachricht.isNotBlank() &&
                 binding.checkBox.isChecked
                 ){
+
+                if (!email.contains("@")) {
+                    Toast.makeText(requireContext(), "Bitte geben Sie eine gültige E-Mail-Adresse ein.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/plain"
                 intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("janmorgenweck@hotmail.com"))

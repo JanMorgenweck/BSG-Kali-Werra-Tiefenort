@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentLoginBinding
-import com.example.bsgkaliwerratiefenort.databinding.FragmentWelcomeBinding
 
 
 class LoginFragment : Fragment() {
@@ -23,7 +22,7 @@ private val viewModel: FirebaseViewModel by activityViewModels()
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLoginBinding.inflate(layoutInflater)
         return binding.root
     }

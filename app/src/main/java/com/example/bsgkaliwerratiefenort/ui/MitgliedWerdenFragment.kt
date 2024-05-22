@@ -11,13 +11,11 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentMitgliedWerdenBinding
 import java.util.Calendar
-
 
 class MitgliedWerdenFragment : Fragment() {
 
@@ -35,7 +33,6 @@ class MitgliedWerdenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         binding.btnSenden.setOnClickListener {
 
@@ -73,6 +70,12 @@ class MitgliedWerdenFragment : Fragment() {
                 binding.cbEinwilligungPersonendaten.isChecked &&
                 binding.cbDatenschutzhinweis.isChecked
             ) {
+
+                // Validate email
+                if (!email.contains("@")) {
+                    Toast.makeText(requireContext(), "Bitte geben Sie eine gültige E-Mail-Adresse ein.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
 
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/plain"
@@ -120,7 +123,6 @@ class MitgliedWerdenFragment : Fragment() {
                     binding.cbBeitragseinzug.isChecked = false
                     binding.cbEinwilligungPersonendaten.isChecked = false
                     binding.cbDatenschutzhinweis.isChecked = false
-
                 } else {
                     Toast.makeText(
                         requireContext(),
@@ -150,8 +152,7 @@ class MitgliedWerdenFragment : Fragment() {
         (activity as MainActivity).binding.toolbar.isGone = false
     }
 
-
-    private fun openPDFUrl (url: String){
+    private fun openPDFUrl(url: String) {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(url)
         startActivity(intent)
@@ -169,21 +170,17 @@ class MitgliedWerdenFragment : Fragment() {
         popupMenu.show()
     }
 
-    private fun showDatePickerDialog(){
+    private fun showDatePickerDialog() {
         val calender = Calendar.getInstance()
         val year = calender.get(Calendar.YEAR)
         val month = calender.get(Calendar.MONTH)
         val day = calender.get(Calendar.DAY_OF_MONTH)
 
-        val datePickerDialog = DatePickerDialog(requireContext(),{ _, year, month, dayOfMonth ->
-        val selectedDate = "    $dayOfMonth/${month +1 }/$year"
+        val datePickerDialog = DatePickerDialog(requireContext(), { _, year, month, dayOfMonth ->
+            val selectedDate = "    $dayOfMonth/${month + 1}/$year"
             binding.tietGeburtsdatum.text = selectedDate
-        }, year,month,day)
+        }, year, month, day)
 
         datePickerDialog.show()
     }
-
-
-
-
 }

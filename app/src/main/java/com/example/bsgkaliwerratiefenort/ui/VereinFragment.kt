@@ -28,14 +28,13 @@ class VereinFragment : Fragment() {
     ): View {
         binding = FragmentVereinBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.svVerein.post {
-            binding.svVerein.scrollTo(0,0)
+            binding.svVerein.scrollTo(0, 0)
         }
 
         (activity as MainActivity).binding.toolbar.isGone = false
@@ -50,27 +49,33 @@ class VereinFragment : Fragment() {
                 nachricht.isNotBlank() &&
                 binding.checkBox.isChecked
             ) {
-                val intent = Intent(Intent.ACTION_SEND)
-                intent.type = "text/plain"
-                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("janmorgenweck@hotmail.com"))
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Nachricht von $name")
-                intent.putExtra(
-                    Intent.EXTRA_TEXT,
-                    "Name: $name\nE-Mail: $email\nNachricht: $nachricht\nDatenschutzerklärung: check️"
-                )
+                if (email.contains("@")) {
+                    val intent = Intent(Intent.ACTION_SEND)
+                    intent.type = "text/plain"
+                    intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("janmorgenweck@hotmail.com"))
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Nachricht von $name")
+                    intent.putExtra(
+                        Intent.EXTRA_TEXT,
+                        "Name: $name\nE-Mail: $email\nNachricht: $nachricht\nDatenschutzerklärung: check️"
+                    )
 
-
-                if (intent.resolveActivity(requireActivity().packageManager) != null) {
-                    startActivity(intent)
-                    binding.tietName.text!!.clear()
-                    binding.tietEmail.text!!.clear()
-                    binding.tietNachricht.text!!.clear()
-                    binding.checkBox.isChecked = false
-
+                    if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                        startActivity(intent)
+                        binding.tietName.text!!.clear()
+                        binding.tietEmail.text!!.clear()
+                        binding.tietNachricht.text!!.clear()
+                        binding.checkBox.isChecked = false
+                    } else {
+                        Toast.makeText(
+                            requireContext(),
+                            "Es wurde keine E-Mail-App gefunden.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 } else {
                     Toast.makeText(
                         requireContext(),
-                        "Es wurde keine E-Mail-App gefunden.",
+                        "Die E-Mail-Adresse muss ein '@' enthalten.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -81,13 +86,12 @@ class VereinFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
         }
+
         binding.ivLogo.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
         binding.llMitgliedWerden.setOnClickListener {
             findNavController().navigate(R.id.mitgliedWerdenFragment)
         }
-
 
         val videoUri =
             Uri.parse("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Videos%2F1715438602394.mp4?alt=media&token=568da80e-9697-41c7-918c-16a374732b8e")
@@ -111,7 +115,6 @@ class VereinFragment : Fragment() {
                 )
             )
         }
-
 
         binding.tvEhrenamt.setOnClickListener {
             findNavController().navigate(R.id.ehrenamtStellenFragment)
