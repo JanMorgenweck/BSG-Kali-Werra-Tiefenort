@@ -16,8 +16,8 @@ import com.example.bsgkaliwerratiefenort.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
 
-private lateinit var binding: FragmentRegisterBinding
-private val viewModel: FirebaseViewModel by activityViewModels()
+    private lateinit var binding: FragmentRegisterBinding
+    private val viewModel: FirebaseViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,19 +38,41 @@ private val viewModel: FirebaseViewModel by activityViewModels()
             val email = binding.tietEmailRegister.text.toString()
             val password = binding.tietPasswordRegister.text.toString()
 
-            if (email.isNotBlank() && password.isNotBlank()){
-                viewModel.register(email,password)
-                binding.tietEmailRegister.text!!.clear()
-                binding.tietPasswordRegister.text!!.clear()
-                Toast.makeText(requireContext(), "Bitte überprüfen Sie Ihre Email!", Toast.LENGTH_LONG).show()
+            if (email.isNotBlank() && password.isNotBlank()) {
+                if (isValidEmail(email)) {
+                    viewModel.register(email, password)
+                    binding.tietEmailRegister.text!!.clear()
+                    binding.tietPasswordRegister.text!!.clear()
+                    Toast.makeText(
+                        requireContext(),
+                        "Bitte überprüfen Sie Ihre Email!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Bitte füllen Sie alle Felder aus.",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
-        viewModel.currentUser.observe(viewLifecycleOwner){
-            if (it != null){
+        viewModel.currentUser.observe(viewLifecycleOwner) {
+            if (it != null) {
                 findNavController().navigate(R.id.startseiteFragment)
             }
         }
+    }
+
+    private fun isValidEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
 
