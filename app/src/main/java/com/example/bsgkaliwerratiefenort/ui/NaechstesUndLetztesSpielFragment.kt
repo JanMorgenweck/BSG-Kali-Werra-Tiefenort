@@ -89,6 +89,8 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
         binding.tvPointsTeam2.text = ""
         binding.teamName2.text = ""
         binding.teamCrest2.setImageResource(android.R.color.transparent)
+        binding.tvSpielort.text = ""
+        binding.tvSpielortStadion.text = ""
     }
 
     private fun resetNextMatchUI() {
@@ -99,5 +101,7 @@ class NaechstesUndLetztesSpielFragment : Fragment() {
         binding.tvPointsTeam2NextMatch.text = ""
         binding.teamName2NextMatch.text = ""
         binding.teamCrest2NextMatch.setImageResource(android.R.color.transparent)
+        binding.tvSpielortNextMatch.text = ""
+        binding.tvSpielortStadionNextMatch.text = ""
     }
 }
