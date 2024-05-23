@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.data.model.Profile
 import com.example.bsgkaliwerratiefenort.data.repo.Repository
 import com.example.bsgkaliwerratiefenort.remote.Api
@@ -18,28 +19,20 @@ import kotlinx.coroutines.launch
 
 class FirebaseViewModel : ViewModel() {
 
-
     private val firebaseAuth = FirebaseAuth.getInstance()
-
-
     private val fireStore = FirebaseFirestore.getInstance()
-
-
     private val storage: FirebaseStorage = FirebaseStorage.getInstance()
     private val storageRef = storage.reference
-
 
     private var _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
     val currentUser: LiveData<FirebaseUser?>
         get() = _currentUser
-
 
     lateinit var profileRef: DocumentReference
 
     private val _profilePictureUri = MutableLiveData<Uri>()
     val profilePictureUri: LiveData<Uri>
         get() = _profilePictureUri
-
 
     init {
         if (firebaseAuth.currentUser != null) {
@@ -69,7 +62,6 @@ class FirebaseViewModel : ViewModel() {
         Log.e("FirebaseViewModel", "Profile updated successfully")
     }
 
-
     fun updateProfilePicture() {
         profilePictureUri.value?.let { uri ->
             profileRef.update("profilePicture", uri.toString())
@@ -87,8 +79,7 @@ class FirebaseViewModel : ViewModel() {
             .addOnCompleteListener { authResult ->
                 if (authResult.isSuccessful) {
                     firebaseAuth.currentUser?.sendEmailVerification()
-                    profileRef =
-                        fireStore.collection("profiles").document(firebaseAuth.currentUser!!.uid)
+                    profileRef = fireStore.collection("profiles").document(firebaseAuth.currentUser!!.uid)
                     profileRef.set(Profile(email, password))
                     logout()
                 } else {
@@ -130,28 +121,34 @@ class FirebaseViewModel : ViewModel() {
 
     val mannschaften = repository.mannschaften
 
-    val lastMatch = repository.lastMatch
+    private val _lastMatch = MutableLiveData<Match?>()
+    val lastMatch: LiveData<Match?> get() = _lastMatch
 
-    val nextMatch = repository.nextMatch
+    private val _nextMatch = MutableLiveData<Match?>()
+    val nextMatch: LiveData<Match?> get() = _nextMatch
 
-
-    fun loadMannschaften(leagueShortcut:String,leagueSeason: Int){
+    fun loadMannschaften(leagueShortcut: String, leagueSeason: Int) {
         viewModelScope.launch {
-            repository.getMannschaften(leagueShortcut,leagueSeason)
+            repository.getMannschaften(leagueShortcut, leagueSeason)
         }
     }
 
-
-    fun loadLastMatch(leagueId: Int, teamId: Int){
+    fun loadLastMatch(leagueId: Int, teamId: Int) {
         viewModelScope.launch {
-            repository.getLastMatch(leagueId, teamId)
+            val match = repository.getLastMatch(leagueId, teamId)
+            _lastMatch.value = match
         }
     }
 
-
-    fun  loadNextMatch(leagueId: Int, teamId: Int){
+    fun loadNextMatch(leagueId: Int, teamId: Int) {
         viewModelScope.launch {
-            repository.getNextMatch(leagueId, teamId)
+            val match = repository.getNextMatch(leagueId, teamId)
+            _nextMatch.value = match
         }
+    }
+
+    fun clearMatches() {
+        _lastMatch.value = null
+        _nextMatch.value = null
     }
 }

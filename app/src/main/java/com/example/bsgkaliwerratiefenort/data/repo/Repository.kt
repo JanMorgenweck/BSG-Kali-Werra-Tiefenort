@@ -7,13 +7,11 @@ import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
 import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.remote.Api
 
-class Repository(private val apiService: Api
-) {
+class Repository(private val apiService: Api) {
 
     private var _mannschaften = MutableLiveData<List<MannschaftAPI>>()
     val mannschaften: LiveData<List<MannschaftAPI>>
         get() = _mannschaften
-
 
     suspend fun getMannschaften(leagueShortcut: String, leagueSeason: Int) {
         try {
@@ -24,43 +22,33 @@ class Repository(private val apiService: Api
         }
     }
 
-
     private var _lastMatch = MutableLiveData<Match>()
     val lastMatch: LiveData<Match>
         get() = _lastMatch
 
-    suspend fun getLastMatch(leagueId: Int, teamId: Int) {
-
-        try {
+    suspend fun getLastMatch(leagueId: Int, teamId: Int): Match? {
+        return try {
             val result = apiService.retrofitService.getLastMatch(leagueId, teamId)
             _lastMatch.postValue(result)
+            result
         } catch (e: Exception) {
             Log.e("TAG", "Kein laden möglich $e")
+            null
         }
     }
-
 
     private var _nextMatch = MutableLiveData<Match>()
     val nextMatch: LiveData<Match>
         get() = _nextMatch
 
-    suspend fun getNextMatch(leagueId: Int, teamId: Int) {
-        try {
+    suspend fun getNextMatch(leagueId: Int, teamId: Int): Match? {
+        return try {
             val result = apiService.retrofitService.getNextMatch(leagueId, teamId)
-            _nextMatch.value = result
+            _nextMatch.postValue(result)
+            result
         } catch (e: Exception) {
             Log.e("TAG", "Kein laden möglich $e")
+            null
         }
     }
-
-    suspend fun fetchNextMatch(leagueId: Int,teamId: Int): Match? {
-        try {
-            val result = apiService.retrofitService.getNextMatch(leagueId, teamId)
-            return result
-        } catch (e: Exception) {
-            Log.e("TAG", "Kein laden möglich $e")
-        }
-        return null
-    }
-
 }
