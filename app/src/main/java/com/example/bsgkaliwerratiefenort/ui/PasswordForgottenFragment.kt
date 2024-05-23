@@ -19,7 +19,7 @@ private val viewModel: FirebaseViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentPasswordForgottenBinding.inflate(layoutInflater)
         return binding.root
     }

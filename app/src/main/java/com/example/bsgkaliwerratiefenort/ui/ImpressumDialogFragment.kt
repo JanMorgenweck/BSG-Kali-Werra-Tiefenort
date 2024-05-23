@@ -22,7 +22,7 @@ class ImpressumDialogFragment : DialogFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentImpressumBinding.inflate(inflater,container,false)
         return binding.root
     }

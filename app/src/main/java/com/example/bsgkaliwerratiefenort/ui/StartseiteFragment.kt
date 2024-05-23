@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
-import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -16,7 +15,6 @@ import coil.load
 import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
 import com.example.bsgkaliwerratiefenort.databinding.FragmentStartseiteBinding
 
 
@@ -27,7 +25,7 @@ class StartseiteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentStartseiteBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -53,26 +51,26 @@ class StartseiteFragment : Fragment() {
         }
 
         binding.onlineShop.setOnClickListener {
-            var url = "https://kali-werra-shop.de"
+            val url = "https://kali-werra-shop.de"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
         }
 
         binding.facebook.setOnClickListener {
-            var fbUrl = "https://www.facebook.com/FSVKaliWerraTiefenort/"
+            val fbUrl = "https://www.facebook.com/FSVKaliWerraTiefenort/"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fbUrl))
             startActivity(intent)
         }
 
         binding.fussballde.setOnClickListener {
-            var fdeUrl =
+            val fdeUrl =
                 "https://www.fussball.de/verein/fsv-kali-werra-tiefenort-thueringen/-/id/00ES8GNC5C00008NVV0AG08LVUPGND5I#!/"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fdeUrl))
             startActivity(intent)
         }
 
         binding.instagram.setOnClickListener {
-            var instUrl = "https://www.instagram.com/kali_werra_tiefenort/?hl=de"
+            val instUrl = "https://www.instagram.com/kali_werra_tiefenort/?hl=de"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(instUrl))
             startActivity(intent)
         }

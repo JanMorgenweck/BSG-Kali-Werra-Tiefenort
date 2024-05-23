@@ -27,7 +27,7 @@ class KontaktDialogFragment : DialogFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentKontakteBinding.inflate(inflater, container, false)
         return binding.root
     }

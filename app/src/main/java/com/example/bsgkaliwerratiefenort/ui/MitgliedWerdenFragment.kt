@@ -11,9 +11,7 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentMitgliedWerdenBinding
 import java.util.Calendar
 
@@ -26,7 +24,7 @@ class MitgliedWerdenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMitgliedWerdenBinding.inflate(layoutInflater)
         return binding.root
     }

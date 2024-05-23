@@ -1,19 +1,15 @@
 package com.example.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentSponsorenBinding
 
 
@@ -25,7 +21,7 @@ class SponsorenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSponsorenBinding.inflate(inflater,container,false)
         return binding.root
     }

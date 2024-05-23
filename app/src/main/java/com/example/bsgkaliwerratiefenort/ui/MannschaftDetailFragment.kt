@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
@@ -15,21 +14,20 @@ import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.bsgkaliwerratiefenort.FirebaseViewModel
 import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
 import com.example.kaliwerra.data.Datasource
 
 class MannschaftDetailFragment:Fragment() {
 
     private lateinit var binding: FragmentDetailMannschaftBinding
-    var datasource = Datasource().loadMannschaften()
+    private var datasource = Datasource().loadMannschaften()
     private val viewModel: FirebaseViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailMannschaftBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -59,7 +57,7 @@ class MannschaftDetailFragment:Fragment() {
         }
 
         binding.tvFussballde.setOnClickListener {
-            var fdeUrl = (activity as MainActivity).datasource[position].link
+            val fdeUrl = (activity as MainActivity).datasource[position].link
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fdeUrl))
             startActivity(intent)
         }

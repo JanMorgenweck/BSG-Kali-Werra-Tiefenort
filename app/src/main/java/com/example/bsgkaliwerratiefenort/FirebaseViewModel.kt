@@ -6,23 +6,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bsgkaliwerratiefenort.data.model.Match
 import com.example.bsgkaliwerratiefenort.data.model.Profile
 import com.example.bsgkaliwerratiefenort.data.repo.Repository
 import com.example.bsgkaliwerratiefenort.remote.Api
-import com.example.kaliwerra.data.Datasource
-import com.example.kaliwerra.data.Mannschaft
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
-class FirebaseViewModel() : ViewModel() {
+class FirebaseViewModel : ViewModel() {
 
 
     private val firebaseAuth = FirebaseAuth.getInstance()
