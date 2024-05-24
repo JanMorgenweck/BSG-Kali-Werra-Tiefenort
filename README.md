@@ -3,4 +3,3 @@
 =======
 # Kali-Werra
 Abschlussprojekt
->>>>>>> b4ed0cc (Initial commit)
