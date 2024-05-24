@@ -151,4 +151,5 @@ class FirebaseViewModel : ViewModel() {
         _lastMatch.value = null
         _nextMatch.value = null
     }
+
 }
