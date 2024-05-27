@@ -1,14 +1,24 @@
 package com.example.bsgkaliwerratiefenort.Adapter
 
+import android.os.Handler
+import android.os.Looper
+import android.text.Html
+import android.text.method.LinkMovementMethod
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.bsgkaliwerratiefenort.data.model.News
 import com.example.bsgkaliwerratiefenort.databinding.NeuigkeitenItemBinding
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import okhttp3.internal.http2.Http2Reader
 
 class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
+
+    private val handler = Handler(Looper.getMainLooper())
+    private val runnables = mutableMapOf<Int, Runnable>()
 
     inner class ItemViewHolder(val binding: NeuigkeitenItemBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -35,6 +45,29 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
             isExpanded = !isExpanded
             holder.binding.tvNews.text = if (isExpanded) news.text else news.shorttext
         }
+
+        val linkText = "<a href='${news.link}'>${news.linkText}</a>"
+        holder.binding.tvNewsLink.text = Html.fromHtml(linkText, Html.FROM_HTML_MODE_LEGACY)
+        holder.binding.tvNewsLink.movementMethod = LinkMovementMethod.getInstance()
+        Log.d("TAG", linkText)
+
+        val images = news.images
+        if (images.isNotEmpty()){
+            holder.binding.ivNewsImage.visibility = View.VISIBLE
+            var imageIndex = 0
+            val runnable = object : Runnable{
+                override fun run() {
+                    holder.binding.ivNewsImage.load(images[imageIndex])
+                    imageIndex = (imageIndex + 1) % images.size
+                    handler.postDelayed(this,5000)
+                }
+            }
+            runnables[position] = runnable
+            handler.post(runnable)
+        } else {
+            holder.binding.ivNewsImage.visibility = View.GONE
+        }
+
     }
     private fun convertToNews(document: QueryDocumentSnapshot): News {
         val image = document.getString("image") ?: ""
@@ -42,6 +75,9 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
         val date = document.getString("date") ?: ""
         val shorttext = document.getString("shorttext") ?: ""
         val text = document.getString("text") ?: ""
-        return News(image, header, date, shorttext, text)
+        val linkText = document.getString("linktext") ?: ""
+        val link = document.getString("link") ?:""
+        val images = (document.get("images") as? List<String>) ?: listOf()
+        return News(image, header, date, shorttext, text, linkText, link, images)
     }
 }

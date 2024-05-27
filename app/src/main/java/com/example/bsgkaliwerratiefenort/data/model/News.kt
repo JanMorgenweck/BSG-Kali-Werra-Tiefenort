@@ -5,5 +5,8 @@ data class News(
     val header: String,
     val date: String,
     val shorttext: String,
-    val text:String
+    val text: String,
+    val linkText: String,
+    val link: String,
+    val images: List<String>
 )
