@@ -10,7 +10,7 @@ import com.example.bsgkaliwerratiefenort.databinding.TabelleItemBinding
 
 class TabelleAdapter(
 
-    val mannschaft: List<MannschaftAPI>
+    private val mannschaft: List<MannschaftAPI>
 ): RecyclerView.Adapter<TabelleAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder( val binding: TabelleItemBinding):ViewHolder(binding.root)
