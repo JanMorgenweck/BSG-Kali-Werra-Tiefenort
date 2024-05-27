@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
 import com.example.bsgkaliwerratiefenort.databinding.TabelleItemBinding
-import com.example.kaliwerra.data.Mannschaft
 
 class TabelleAdapter(
 

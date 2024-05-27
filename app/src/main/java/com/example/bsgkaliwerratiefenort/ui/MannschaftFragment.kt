@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentMannschaftBinding
-import com.example.kaliwerra.Adapter.MannschaftsAdapter
+import com.example.bsgkaliwerratiefenort.Adapter.MannschaftsAdapter
 import com.example.kaliwerra.data.Datasource
 
 

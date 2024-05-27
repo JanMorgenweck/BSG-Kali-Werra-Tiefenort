@@ -1,4 +1,4 @@
-package com.example.kaliwerra.Adapter
+package com.example.bsgkaliwerratiefenort.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
