@@ -13,6 +13,10 @@ import coil.load
 import com.example.bsgkaliwerratiefenort.data.model.News
 import com.example.bsgkaliwerratiefenort.databinding.NeuigkeitenItemBinding
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.Local
 
 class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
 
@@ -37,7 +41,11 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
 
         holder.binding.ivNews.load(news.image)
         holder.binding.tvNewsHeader.text = news.header
-        holder.binding.tvNewsDate.text = news.date
+
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val formattedDate = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(dateFormat.parse(news.date) ?: Date())
+        holder.binding.tvNewsDate.text = formattedDate
+
         holder.binding.tvNews.text = news.shorttext
 
         holder.binding.tvNews.setOnClickListener {
