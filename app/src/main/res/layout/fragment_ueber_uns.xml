@@ -73,15 +73,15 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/die_geschichte"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvUnsereSportstaette" />
 
             <ImageView
                 android:id="@+id/ivStadionUmbau1"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -90,8 +90,8 @@
 
             <ImageView
                 android:id="@+id/ivStadionUmbau2"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -107,15 +107,15 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/mit_der_unterst_tzung"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau1" />
 
             <ImageView
                 android:id="@+id/ivStadionUmbau3"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -124,8 +124,8 @@
 
             <ImageView
                 android:id="@+id/ivStadionUmbau4"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -141,15 +141,15 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/nach_dem_politischen"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau3" />
 
             <ImageView
                 android:id="@+id/ivStadionUmbau5"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,8 +158,8 @@
 
             <ImageView
                 android:id="@+id/ivStadionUmbau6"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -175,15 +175,15 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/in_der_zeit"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau5" />
 
             <ImageView
                 android:id="@+id/ivStadionUmbau7"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -192,8 +192,8 @@
 
             <ImageView
                 android:id="@+id/ivStadionUmbau8"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -209,15 +209,15 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/mit_der_eingemeindung"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivStadionUmbau7" />
 
             <ImageView
                 android:id="@+id/ivStadionUmbau9"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
@@ -312,6 +312,19 @@
             </FrameLayout>
 
             <TextView
+                android:id="@+id/tvQuelleTreffpunk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/quelle_https_www_treffpunktfussball_org"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fl110Jahre"/>
+
+            <TextView
                 android:id="@+id/tvBundesligaU17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -324,7 +337,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fl110Jahre" />
+                app:layout_constraintTop_toBottomOf="@id/tvQuelleTreffpunk" />
 
             <FrameLayout
                 android:id="@+id/flBundesligaU17"
