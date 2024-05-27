@@ -13,7 +13,6 @@ import coil.load
 import com.example.bsgkaliwerratiefenort.data.model.News
 import com.example.bsgkaliwerratiefenort.databinding.NeuigkeitenItemBinding
 import com.google.firebase.firestore.QueryDocumentSnapshot
-import okhttp3.internal.http2.Http2Reader
 
 class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
 
