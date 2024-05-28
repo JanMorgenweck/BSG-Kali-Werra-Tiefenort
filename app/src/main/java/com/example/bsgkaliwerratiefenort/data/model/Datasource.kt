@@ -1,7 +1,5 @@
 package com.example.kaliwerra.data
 
-import com.example.bsgkaliwerratiefenort.data.model.News
-
 class Datasource {
 
 
