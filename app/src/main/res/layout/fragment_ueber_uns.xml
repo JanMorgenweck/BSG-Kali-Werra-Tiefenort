@@ -367,14 +367,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
                 android:text="@string/quelle_https_www_srf_online_de"
                 android:textSize="11sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flBundesligaU17" />
 
+            <Button
+                android:id="@+id/btnPlayHymne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/vereinshymne_abspielen"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvQuelleSRF" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

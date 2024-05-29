@@ -238,4 +238,6 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="slb2">- Überprüfung der strategischen Ausrichtung des Spiel- und Trainingsbetriebs unserer Mannschaften</string>
     <string name="text">text</string>
     <string name="quelle_https_www_treffpunktfussball_org">Quelle: https://www.treffpunktfussball.org</string>
+    <string name="vereinshymne_abspielen">Vereinshymne abspielen</string>
+    <string name="vereinshymne_stoppen">Vereinshymne stoppen</string>
 </resources>
