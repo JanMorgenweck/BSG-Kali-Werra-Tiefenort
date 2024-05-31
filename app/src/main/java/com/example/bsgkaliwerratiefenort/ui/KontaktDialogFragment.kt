@@ -10,8 +10,20 @@ import androidx.fragment.app.DialogFragment
 import coil.load
 import com.example.bsgkaliwerratiefenort.R
 import com.example.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
+import com.google.android.gms.maps.model.MarkerOptions
 
-class KontaktDialogFragment : DialogFragment() {
+class KontaktDialogFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMapLoadedCallback {
+
+
+    private lateinit var mapView: MapView
+    private lateinit var googleMap: GoogleMap
+
 
     private var _binding: FragmentKontakteBinding? = null
     private val binding get() = _binding!!
@@ -106,9 +118,9 @@ class KontaktDialogFragment : DialogFragment() {
         }
 
 
-        val imageURL =
-            "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Bildschirmfoto%202024-04-15%20um%2011.16.00.png?alt=media&token=1046f0d4-1ffa-4ff3-9162-c49bc69f350b"
-        binding.ivAnfahrt.load(imageURL)
+//        val imageURL =
+//            "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Bildschirmfoto%202024-04-15%20um%2011.16.00.png?alt=media&token=1046f0d4-1ffa-4ff3-9162-c49bc69f350b"
+//        binding.ivAnfahrt.load(imageURL)
 
 
         val imageUrl = "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Von-der-Bahn-ins-Kaffeetaelchen.jpg?alt=media&token=ba0ddec0-5140-4409-90be-a892a87ae850"
@@ -118,11 +130,34 @@ class KontaktDialogFragment : DialogFragment() {
             dismiss()
         }
 
+        mapView = binding.mapviewMap
+        mapView.onCreate(savedInstanceState)
+        mapView.onResume()
+        mapView.getMapAsync(this)
+
 
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
+        val location = LatLng(50.84240822531988, 10.17660949440701)
+        googleMap.addMarker(MarkerOptions().position(location).title("Kaffeetälchen 3, 36469 Bad Salzungen"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 17f))
+        googleMap.setOnMapLoadedCallback { this }
+
+    }
+
+    override fun onMapLoaded() {
+        val location = LatLng(50.84240822531988 ,10.17660949440701)
+        val boundsBuilder = LatLngBounds.builder()
+        boundsBuilder.include(location)
+        val bounds = boundsBuilder.build()
+        val padding = resources.getDimensionPixelSize(R.dimen.map_padding)
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, padding))
     }
 }
