@@ -35,3 +35,19 @@
 <br>
 <a href="http://kali-werra.de"> Kali Werra Tiefenort</a>
 
+## Special Thanks to:
+
+Friends:
+
+- Eike Matthias Engelmann
+- Juri Huhn
+
+Lecturer and tutors:
+
+- Michael Karbe
+
+
+- Brain Moyou
+- Davide Stumm
+- Laurenz Meies
+- Max Krass
