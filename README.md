@@ -33,6 +33,12 @@
 <br>
 <a href="https://github.com/JanMorgenweck/BSG-Kali-Werra-Tiefenort">Projekt Repository</a>
 <br>
+<a href="https://www.facebook.com/jan.morgenweck.92">Facebook</a>
+<br>
+<a href="https://www.instagram.com/jan_morgenweck/">Instagram</a>
+<br>
+<a href="https://www.linkedin.com/in/jan-morgenweck-9990752a4/">LinkedIn</a>
+<br>
 <a href="http://kali-werra.de"> Kali Werra Tiefenort</a>
 
 ## Special Thanks to:
