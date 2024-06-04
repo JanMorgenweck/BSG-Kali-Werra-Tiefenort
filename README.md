@@ -51,3 +51,4 @@ Lecturer and tutors:
 - Davide Stumm
 - Laurenz Meies
 - Max Krass
+- 
