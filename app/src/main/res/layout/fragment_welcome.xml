@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/fsv_kali_werra"
+        android:text="@string/bsg_kali_werra"
         android:textColor="@color/black"
         style="@style/Text"
         android:textStyle="bold"
