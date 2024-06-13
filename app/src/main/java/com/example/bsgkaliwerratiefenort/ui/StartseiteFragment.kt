@@ -37,10 +37,6 @@ class StartseiteFragment : Fragment() {
         binding.LogoHome.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
         binding.ivVereinsLogos.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Grafik_Kali-Wappen_Tradition-seit-1913.webp?alt=media&token=924b1ff6-74e8-4057-994f-b2fad6326d05")
 
-        // Beim Klick auf Logout, wird die Logout Funktion im ViewModel aufgerufen
-        binding.btLogout.setOnClickListener {
-            viewModel.logout()
-        }
 
         // currentUser LiveData aus dem ViewModel wird beobachtet
         // Wenn currentUser gleich null (also der User nicht mehr eingeloggt ist) wird zum LoginFragment navigiert
@@ -165,10 +161,6 @@ class StartseiteFragment : Fragment() {
                     true
                 }
 
-                R.id.action_profil -> {
-                    findNavController().navigate(R.id.profilFragment)
-                    true
-                }
                 else -> false
             }
         }

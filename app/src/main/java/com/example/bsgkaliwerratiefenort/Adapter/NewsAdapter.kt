@@ -16,14 +16,13 @@ import com.google.firebase.firestore.QueryDocumentSnapshot
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.Local
 
 class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerView.Adapter<NewsAdapter.ItemViewHolder>() {
 
     private val handler = Handler(Looper.getMainLooper())
     private val runnables = mutableMapOf<Int, Runnable>()
 
-    inner class ItemViewHolder(val binding: NeuigkeitenItemBinding): RecyclerView.ViewHolder(binding.root)
+    inner class ItemViewHolder(val binding: NeuigkeitenItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = NeuigkeitenItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -59,14 +58,14 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
         Log.d("TAG", linkText)
 
         val images = news.images
-        if (images.isNotEmpty()){
+        if (images.isNotEmpty()) {
             holder.binding.ivNewsImage.visibility = View.VISIBLE
             var imageIndex = 0
-            val runnable = object : Runnable{
+            val runnable = object : Runnable {
                 override fun run() {
                     holder.binding.ivNewsImage.load(images[imageIndex])
                     imageIndex = (imageIndex + 1) % images.size
-                    handler.postDelayed(this,5000)
+                    handler.postDelayed(this, 5000)
                 }
             }
             runnables[position] = runnable
@@ -74,8 +73,8 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
         } else {
             holder.binding.ivNewsImage.visibility = View.GONE
         }
-
     }
+
     private fun convertToNews(document: QueryDocumentSnapshot): News {
         val image = document.getString("image") ?: ""
         val header = document.getString("header") ?: ""
@@ -83,8 +82,15 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
         val shorttext = document.getString("shorttext") ?: ""
         val text = document.getString("text") ?: ""
         val linkText = document.getString("linktext") ?: ""
-        val link = document.getString("link") ?:""
+        val link = document.getString("link") ?: ""
         val images = (document.get("images") as? List<String>) ?: listOf()
         return News(image, header, date, shorttext, text, linkText, link, images)
+    }
+
+    override fun onViewRecycled(holder: ItemViewHolder) {
+        super.onViewRecycled(holder)
+        runnables[holder.adapterPosition]?.let {
+            handler.removeCallbacks(it)
+        }
     }
 }

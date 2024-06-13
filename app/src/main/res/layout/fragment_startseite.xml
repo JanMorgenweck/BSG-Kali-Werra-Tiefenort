@@ -36,7 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
         android:alpha="1"
         android:backgroundTint="@color/white"
@@ -50,7 +49,6 @@
         android:id="@+id/datenschutz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
         android:alpha="1"
         android:backgroundTint="@color/white"
@@ -58,7 +56,6 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/kontakt"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toEndOf="@+id/Impressum"
         app:layout_constraintTop_toBottomOf="@+id/fussballde" />
 
@@ -66,7 +63,6 @@
         android:id="@+id/kontakt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="8dp"
         android:alpha="1"
@@ -82,35 +78,27 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="20dp"
-        android:alpha="1"
         app:layout_constraintBottom_toBottomOf="@+id/fussballde"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_logout"
         app:srcCompat="@drawable/facebook_icon" />
 
     <ImageView
         android:id="@+id/fussballde"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:alpha="1"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toStartOf="@+id/instagram"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintTop_toBottomOf="@+id/onlineShop"
         app:layout_constraintStart_toEndOf="@+id/facebook"
-        app:layout_constraintTop_toBottomOf="@+id/bt_logout"
-        app:srcCompat="@drawable/fussball_de" />
+        app:srcCompat="@drawable/fussball_de"/>
 
     <ImageView
         android:id="@+id/instagram"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="72dp"
-        android:alpha="1"
         app:layout_constraintBottom_toBottomOf="@+id/fussballde"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_logout"
         app:srcCompat="@drawable/instagram_logo_2016" />
 
     <TextView
@@ -203,19 +191,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivVereinsLogos" />
-
-    <Button
-        android:id="@+id/bt_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/logout"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onlineShop" />
 
     <ImageView
         android:id="@+id/ivMenu"

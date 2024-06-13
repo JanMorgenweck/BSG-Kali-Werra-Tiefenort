@@ -97,10 +97,6 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.action_profil -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.profilFragment)
-                    true
-                }
                 else -> false
             }
         }

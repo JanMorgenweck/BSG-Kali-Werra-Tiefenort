@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bsgkaliwerratiefenort.Adapter.NewsAdapter
 import com.example.bsgkaliwerratiefenort.MainActivity
 import com.example.bsgkaliwerratiefenort.databinding.FragmentNeuigkeitenBinding
@@ -58,5 +59,6 @@ class NeuigkeitenFragment : Fragment() {
     private fun setupRecyclerView(newsList: MutableList<QueryDocumentSnapshot>) {
         newsAdapter = NewsAdapter(newsList)
         binding.rvNews.adapter = newsAdapter
+        binding.rvNews.layoutManager = LinearLayoutManager(context)
     }
 }

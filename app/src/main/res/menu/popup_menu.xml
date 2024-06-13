@@ -31,9 +31,5 @@
 
 </group>
 
-    <item
-        android:id="@+id/action_profil"
-        android:title="@string/profil_account" />
-
 
 </menu>

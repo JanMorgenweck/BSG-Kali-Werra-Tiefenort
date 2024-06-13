@@ -33,7 +33,7 @@ class WelcomeFragment : Fragment() {
             override fun run() {
                 activity?.runOnUiThread {
                     // Hier können Sie Ihre Aktion ausführen, z.B. Navigation zum HomeFragment
-                    findNavController().navigate(R.id.loginFragment)
+                    findNavController().navigate(R.id.startseiteFragment)
                 }
             }
         }, 3000) // 3 Sekunden Verzögerung
