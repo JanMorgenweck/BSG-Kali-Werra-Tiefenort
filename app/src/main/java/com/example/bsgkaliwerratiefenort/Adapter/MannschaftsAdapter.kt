@@ -1,13 +1,13 @@
-package com.example.bsgkaliwerratiefenort.Adapter
+package de.janmorgenweck.bsgkaliwerratiefenort.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.bsgkaliwerratiefenort.databinding.MannschaftItemBinding
-import com.example.bsgkaliwerratiefenort.ui.MannschaftFragmentDirections
-import com.example.kaliwerra.data.Mannschaft
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.MannschaftItemBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.ui.MannschaftFragmentDirections
+import de.janmorgenweck.bsgkaliwerratiefenort.data.Mannschaft
 
 
 class MannschaftsAdapter(

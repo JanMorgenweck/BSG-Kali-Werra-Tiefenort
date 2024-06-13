@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.graphics.drawable.Animatable2
 import android.graphics.drawable.AnimatedVectorDrawable
@@ -10,11 +10,11 @@ import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.bsgkaliwerratiefenort.Adapter.TabelleAdapter
-import com.example.bsgkaliwerratiefenort.FirebaseViewModel
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentTabelleBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.Adapter.TabelleAdapter
+import de.janmorgenweck.bsgkaliwerratiefenort.FirebaseViewModel
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.R
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentTabelleBinding
 
 
 class TabelleFragment : Fragment() {

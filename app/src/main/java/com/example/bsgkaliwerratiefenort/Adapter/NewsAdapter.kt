@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.Adapter
+package de.janmorgenweck.bsgkaliwerratiefenort.Adapter
 
 import android.os.Handler
 import android.os.Looper
@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.bsgkaliwerratiefenort.data.model.News
-import com.example.bsgkaliwerratiefenort.databinding.NeuigkeitenItemBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.News
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.NeuigkeitenItemBinding
 import com.google.firebase.firestore.QueryDocumentSnapshot
 import java.text.SimpleDateFormat
 import java.util.Date

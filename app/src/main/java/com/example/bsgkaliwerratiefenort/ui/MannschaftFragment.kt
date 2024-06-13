@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentMannschaftBinding
-import com.example.bsgkaliwerratiefenort.Adapter.MannschaftsAdapter
-import com.example.kaliwerra.data.Datasource
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.R
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentMannschaftBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.Adapter.MannschaftsAdapter
+import de.janmorgenweck.bsgkaliwerratiefenort.data.Datasource
 
 
 class MannschaftFragment : Fragment() {

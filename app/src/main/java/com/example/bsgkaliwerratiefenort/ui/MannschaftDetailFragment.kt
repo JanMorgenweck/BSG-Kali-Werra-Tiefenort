@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
-import com.example.bsgkaliwerratiefenort.FirebaseViewModel
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
-import com.example.kaliwerra.data.Datasource
+import de.janmorgenweck.bsgkaliwerratiefenort.FirebaseViewModel
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentDetailMannschaftBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.data.Datasource
 
 class MannschaftDetailFragment:Fragment() {
 

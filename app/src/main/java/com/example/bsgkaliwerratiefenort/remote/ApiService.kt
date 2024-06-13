@@ -1,7 +1,7 @@
-package com.example.bsgkaliwerratiefenort.remote
+package de.janmorgenweck.bsgkaliwerratiefenort.remote
 
-import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
-import com.example.bsgkaliwerratiefenort.data.model.Match
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.MannschaftAPI
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.Match
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient

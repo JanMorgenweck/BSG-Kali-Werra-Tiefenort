@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -11,8 +11,8 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.databinding.FragmentMitgliedWerdenBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentMitgliedWerdenBinding
 import java.util.Calendar
 
 class MitgliedWerdenFragment : Fragment() {

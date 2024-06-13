@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.databinding.FragmentEhrenamtStellenBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentEhrenamtStellenBinding
 
 class EhrenamtStellenFragment : Fragment() {
 

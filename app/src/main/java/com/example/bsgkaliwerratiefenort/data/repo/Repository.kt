@@ -1,11 +1,11 @@
-package com.example.bsgkaliwerratiefenort.data.repo
+package de.janmorgenweck.bsgkaliwerratiefenort.data.repo
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
-import com.example.bsgkaliwerratiefenort.data.model.Match
-import com.example.bsgkaliwerratiefenort.remote.Api
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.MannschaftAPI
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.Match
+import de.janmorgenweck.bsgkaliwerratiefenort.remote.Api
 
 class Repository(private val apiService: Api) {
 

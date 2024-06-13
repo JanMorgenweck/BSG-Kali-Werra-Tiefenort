@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.data.model
+package de.janmorgenweck.bsgkaliwerratiefenort.data.model
 
 data class MannschaftAPI(
     val teamInfoId: Int,

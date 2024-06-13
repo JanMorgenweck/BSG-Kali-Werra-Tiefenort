@@ -6,37 +6,24 @@
     app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.WelcomeFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" />
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
-    <fragment
-        android:id="@+id/passwordForgottenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.PasswordForgottenFragment"
-        android:label="fragment_password_forgotten"
-        tools:layout="@layout/fragment_password_forgotten" />
+
+
     <fragment
         android:id="@+id/startseiteFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.StartseiteFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.StartseiteFragment"
         android:label="fragment_startseite"
         tools:layout="@layout/fragment_startseite" />
     <fragment
         android:id="@+id/impressumFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.ImpressumFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.ImpressumDialogFragment"
         android:label="fragment_impressum"
         tools:layout="@layout/fragment_impressum" />
     <fragment
         android:id="@+id/mannschaftFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.MannschaftFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.MannschaftFragment"
         android:label="fragment_mannschaft"
         tools:layout="@layout/fragment_mannschaft" >
         <action
@@ -45,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/mannschaftDetailFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.MannschaftDetailFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.MannschaftDetailFragment"
         android:label="MannschaftDetailFragment" >
         <argument
             android:name="position"
@@ -59,17 +46,17 @@
     </fragment>
     <fragment
         android:id="@+id/vereinFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.VereinFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.VereinFragment"
         android:label="fragment_verein"
         tools:layout="@layout/fragment_verein" />
     <fragment
         android:id="@+id/mitgliedWerdenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.MitgliedWerdenFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.MitgliedWerdenFragment"
         android:label="fragment_mitglied_werden"
         tools:layout="@layout/fragment_mitglied_werden" />
     <fragment
         android:id="@+id/tabelleFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.TabelleFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.TabelleFragment"
         android:label="fragment_tabelle"
         tools:layout="@layout/fragment_tabelle" >
         <argument
@@ -78,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/naechstesUndLetztesSpielFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.NaechstesUndLetztesSpielFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.NaechstesUndLetztesSpielFragment"
         android:label="fragment_naechstes_und_letztes_spiel"
         tools:layout="@layout/fragment_naechstes_und_letztes_spiel" >
         <argument
@@ -86,33 +73,28 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/profilFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.ProfilFragment"
-        android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" />
-    <fragment
         android:id="@+id/neuigkeitenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.NeuigkeitenFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.NeuigkeitenFragment"
         android:label="fragment_neuigkeiten"
         tools:layout="@layout/fragment_neuigkeiten" />
     <fragment
         android:id="@+id/ueberUnsFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.UeberUnsFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.UeberUnsFragment"
         android:label="fragment_ueber_uns"
         tools:layout="@layout/fragment_ueber_uns" />
     <fragment
         android:id="@+id/sponsorenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.SponsorenFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.SponsorenFragment"
         android:label="fragment_sponsoren"
         tools:layout="@layout/fragment_sponsoren" />
     <fragment
         android:id="@+id/datenschutzFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.DatenschutzFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.DatenschutzFragment"
         android:label="fragment_datenschutz"
         tools:layout="@layout/fragment_datenschutz" />
     <fragment
         android:id="@+id/ehrenamtStellenFragment"
-        android:name="com.example.bsgkaliwerratiefenort.ui.EhrenamtStellenFragment"
+        android:name="de.janmorgenweck.bsgkaliwerratiefenort.ui.EhrenamtStellenFragment"
         android:label="fragment_ehrenamt_stellen"
         tools:layout="@layout/fragment_ehrenamt_stellen" />
 </navigation>

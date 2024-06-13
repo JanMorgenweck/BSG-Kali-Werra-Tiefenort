@@ -24,11 +24,11 @@ secrets {
 
 
 android {
-    namespace = "com.example.bsgkaliwerratiefenort"
+    namespace = "de.janmorgenweck.bsgkaliwerratiefenort"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bsgkaliwerratiefenort"
+        applicationId = "de.janmorgenweck.bsgkaliwerratiefenort"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

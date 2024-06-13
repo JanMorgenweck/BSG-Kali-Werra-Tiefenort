@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort
+package de.janmorgenweck.bsgkaliwerratiefenort
 
 import android.content.Intent
 import android.net.Uri
@@ -9,8 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import coil.load
-import com.example.bsgkaliwerratiefenort.databinding.ActivityMainBinding
-import com.example.kaliwerra.data.Datasource
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.ActivityMainBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.data.Datasource
+import de.janmorgenweck.bsgkaliwerratiefenort.R
 
 class MainActivity : AppCompatActivity() {
 

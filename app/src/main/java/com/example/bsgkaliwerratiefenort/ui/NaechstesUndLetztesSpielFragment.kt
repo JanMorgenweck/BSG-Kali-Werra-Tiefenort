@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import coil.load
-import com.example.bsgkaliwerratiefenort.FirebaseViewModel
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.databinding.FragmentNaechstesUndLetztesSpielBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.FirebaseViewModel
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentNaechstesUndLetztesSpielBinding
 
 class NaechstesUndLetztesSpielFragment : Fragment() {
 

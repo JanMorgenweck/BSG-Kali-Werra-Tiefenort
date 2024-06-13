@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort
+package de.janmorgenweck.bsgkaliwerratiefenort
 
 import org.junit.Test
 

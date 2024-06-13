@@ -1,4 +1,4 @@
-package com.example.kaliwerra.data
+package de.janmorgenweck.bsgkaliwerratiefenort.data
 
 class Datasource {
 

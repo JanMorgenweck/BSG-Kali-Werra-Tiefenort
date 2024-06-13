@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort
+package de.janmorgenweck.bsgkaliwerratiefenort
 
 import android.net.Uri
 import android.util.Log
@@ -6,10 +6,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bsgkaliwerratiefenort.data.model.Match
-import com.example.bsgkaliwerratiefenort.data.model.Profile
-import com.example.bsgkaliwerratiefenort.data.repo.Repository
-import com.example.bsgkaliwerratiefenort.remote.Api
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.Match
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.Profile
+import de.janmorgenweck.bsgkaliwerratiefenort.data.repo.Repository
+import de.janmorgenweck.bsgkaliwerratiefenort.remote.Api
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference

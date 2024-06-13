@@ -1,11 +1,11 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.example.bsgkaliwerratiefenort.databinding.FragmentImpressumBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentImpressumBinding
 
 class ImpressumDialogFragment : DialogFragment() {
 

@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import coil.load
-import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.R
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentKontakteBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView

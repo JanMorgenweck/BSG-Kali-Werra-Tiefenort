@@ -1,4 +1,4 @@
-package com.example.bsgkaliwerratiefenort.ui
+package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
-import com.example.bsgkaliwerratiefenort.FirebaseViewModel
-import com.example.bsgkaliwerratiefenort.MainActivity
-import com.example.bsgkaliwerratiefenort.R
-import com.example.bsgkaliwerratiefenort.databinding.FragmentStartseiteBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.FirebaseViewModel
+import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
+import de.janmorgenweck.bsgkaliwerratiefenort.R
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentStartseiteBinding
 
 
 class StartseiteFragment : Fragment() {
@@ -38,13 +38,6 @@ class StartseiteFragment : Fragment() {
         binding.ivVereinsLogos.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Grafik_Kali-Wappen_Tradition-seit-1913.webp?alt=media&token=924b1ff6-74e8-4057-994f-b2fad6326d05")
 
 
-        // currentUser LiveData aus dem ViewModel wird beobachtet
-        // Wenn currentUser gleich null (also der User nicht mehr eingeloggt ist) wird zum LoginFragment navigiert
-        viewModel.currentUser.observe(viewLifecycleOwner) {
-            if (it == null) {
-                findNavController().navigate(R.id.loginFragment)
-            }
-        }
 
         binding.onlineShop.setOnClickListener {
             val url = "https://kali-werra-shop.de"

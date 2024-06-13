@@ -1,12 +1,12 @@
-package com.example.bsgkaliwerratiefenort.Adapter
+package de.janmorgenweck.bsgkaliwerratiefenort.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
-import com.example.bsgkaliwerratiefenort.data.model.MannschaftAPI
-import com.example.bsgkaliwerratiefenort.databinding.TabelleItemBinding
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.MannschaftAPI
+import de.janmorgenweck.bsgkaliwerratiefenort.databinding.TabelleItemBinding
 
 class TabelleAdapter(
 
