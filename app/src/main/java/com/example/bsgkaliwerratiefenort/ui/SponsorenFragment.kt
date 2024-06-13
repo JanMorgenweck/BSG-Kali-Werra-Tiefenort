@@ -89,7 +89,7 @@ class SponsorenFragment : Fragment() {
                 }
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/plain"
-                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("janmorgenweck@hotmail.com"))
+                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("info@kali-werra.de"))
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Nachricht von $name")
                 intent.putExtra(
                     Intent.EXTRA_TEXT,
