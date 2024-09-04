@@ -1,6 +1,7 @@
 package de.janmorgenweck.bsgkaliwerratiefenort.data
 
 data class Mannschaft(
+    var id: String,
     val name: String,
     val image: String,
     val info:String,

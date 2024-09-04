@@ -11,9 +11,9 @@
     <string name="neuigkeiten">Neuigkeiten</string>
     <string name="tiefenort">Tiefenort</string>
     <string name="bsg_kali_werra">BSG Kali Werra</string>
-    <string name="beim">beim</string>
+    <string name="beim">bei der</string>
     <string name="willkommen">Willkommen</string>
-    <string name="Mannschaften_Header">AUF DIE TRADITION BEDACHT UND DIE ZUKUNFT FEST IM BLICK – FUSSBALL BEIM FSV KALI WERRA TIEFENORT</string>
+    <string name="Mannschaften_Header">AUF DIE TRADITION BEDACHT UND DIE ZUKUNFT FEST IM BLICK – FUSSBALL BEI der BSG KALI WERRA TIEFENORT</string>
     <string name="Mannschaften_Einleitung">Mit Spaß, Spielidee und Leidenschaft wurde in Tiefenort Fußball gespielt – und das bereits seit 1913. Zwanzig Jahre Zweitliga-Fußball im Kaffeetälchen – atemberaubende Momente. Auch wenn die letzten Jahrzehnte sportlich einer Berg- und Talfahrt glichen, treibt uns ein Ziel weiterhin an: GEMEINSAM wollen wir wieder ERFOLGREICH sein. Für den Sport, für den Verein, für die Region. Werde auch du ein Teil unserer Gemeinschaft, denn wir alle sind Kali Werra!
 
 
@@ -21,7 +21,7 @@ Die Nachwuchsförderung ist der wichtigste Baustein für eine erfolgreiche Zukun
 
 
 
-Deshalb hat es sich der FSV Kali Werra Tiefenort zur Aufgabe gemacht, die Jugend leistungsorientiert zu fördern und ihr eine Perspektive zu bieten. Diesem Leitgedanken folgte 2022 die Gründung des Nachwuchszentrums Kali Werra zusammen mit den umliegenden Vereinen der Krayenberg-Region, um ein qualitativ und quantitativ hochwertiges Entwicklungspotenzial aufbieten zu können. In der Spielzeit 2023/24 stellt das Nachwuchszentrum Kali Werra elf Kinder- und Jugendmannschaften zum regelmäßigen Spielbetrieb.</string>
+Deshalb hat es sich die BSG Kali Werra Tiefenort zur Aufgabe gemacht, die Jugend leistungsorientiert zu fördern und ihr eine Perspektive zu bieten. Diesem Leitgedanken folgte 2022 die Gründung des Nachwuchszentrums Kali Werra zusammen mit den umliegenden Vereinen der Krayenberg-Region, um ein qualitativ und quantitativ hochwertiges Entwicklungspotenzial aufbieten zu können. In der Spielzeit 2023/24 stellt das Nachwuchszentrum Kali Werra elf Kinder- und Jugendmannschaften zum regelmäßigen Spielbetrieb.</string>
     <string name="_1_herren_mannschaft">1. Herren Mannschaft</string>
     <string name="mehr">mehr</string>
     <string name="Mannschaften_Einleitung_Kurz">Mit Spaß, Spielidee und Leidenschaft wurde in Tiefenort Fußball gespielt – und das bereits seit 1913. ...</string>
@@ -32,7 +32,7 @@ Deshalb hat es sich der FSV Kali Werra Tiefenort zur Aufgabe gemacht, die Jugend
     <string name="mannschaft">Mannschaft</string>
     <string name="angaben_gem_5_tmg">Angaben gemäß § 5 TMG</string>
     <string name="anschrift">
-FSV Kali Werra Tiefenort e.V.
+BSG Kali Werra Tiefenort e.V.
 Kaffeetälchen 3
 36469  Bad Salzungen OT Tiefenort
 
@@ -61,8 +61,8 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="tv_Anfahrt_PKW">Mit dem Auto: Kaffeetälchen 3, 36469 Tiefenort | Parken i.d.R. direkt im Waldstadion Kaffeetälchen möglich, ansonsten im unteren Teil der Waldstraße.</string>
     <string name="tv_Anfahrt_Bahn">Mit der Bahn: Süd-Thüringen-Bahn bis zur Haltestelle Oberrohn, danach zu Fuß ungefähr 45 Minuten (Strecke: circa 3 km) über den Wald-Wanderweg.</string>
     <string name="schlie_en">Schließen</string>
-    <string name="fsv_kali_werra_tiefenort_e_v_kaffeet_lchen_3_36469_bad_salzungen_ot_tiefenort_vereinsregister_300135_registergericht_bad_salzungen_vertreten_durch_den_vorstand_markus_peter_vorstandsvorsitzender">FSV Kali Werra Tiefenort e.V. Kaffeetälchen 3 36469 Bad Salzungen OT Tiefenort Vereinsregister: 300135 Registergericht: Bad Salzungen Vertreten durch den Vorstand: Markus Peter (Vorstandsvorsitzender)</string>
-    <string name="name">FSV Kali Werra Tiefenort e.V</string>
+    <string name="fsv_kali_werra_tiefenort_e_v_kaffeet_lchen_3_36469_bad_salzungen_ot_tiefenort_vereinsregister_300135_registergericht_bad_salzungen_vertreten_durch_den_vorstand_markus_peter_vorstandsvorsitzender">BSG Kali Werra Tiefenort e.V. Kaffeetälchen 3 36469 Bad Salzungen OT Tiefenort Vereinsregister: 300135 Registergericht: Bad Salzungen Vertreten durch den Vorstand: Markus Peter (Vorstandsvorsitzender)</string>
+    <string name="name">BSG Kali Werra Tiefenort e.V</string>
     <string name="strasse">Kaffeetälchen 3</string>
     <string name="ort">36469 Bad Salzungen OT Tiefenort</string>
     <string name="vereinsregister">Vereinsregister: 300135</string>
@@ -100,7 +100,7 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="mitgliedsbekundung">Mitgliedsbekundung</string>
     <string name="mitgliedsbekundung_text">Ich habe das 18. Lebensjahr vollendet oder die Zustimmung eines gesetzlichen Vertreters eingeholt und bekunde hiermit meinen Eintritt als Mitglied des Sportvereins FSV Kali Werra Tiefenort e.V.</string>
     <string name="beitragseinzug">Beitragseinzug</string>
-    <string name="beitragseinzug_text">Ich ermächtige den FSV Kali Werra Tiefenort e.V., Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von FSV Kali Werra Tiefenort e.V. auf mein Konto gezogenen Lastschriften einzulösen. Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</string>
+    <string name="beitragseinzug_text">Ich ermächtige die BSG Kali Werra Tiefenort e.V., Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der BSG Kali Werra Tiefenort e.V. auf mein Konto gezogenen Lastschriften einzulösen. Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</string>
     <string name="einwilligung_personendaten">Einwilligung Personendaten</string>
     <string name="datenschutzhinweis">Datenschutzhinweis</string>
     <string name="Spielerlaubnis">Um aktiv am Spielbetrieb teilnehmen zu können, benötigen wir zusätzlich noch den vollständig ausgefüllten <font color='red'>Antrag auf Spielerlaubnis</font>, eine Kopie der Geburtsurkunde, sowie ein Passbild des Mitglieds. Diese Unterlagen sind zeitnah in den entsprechenden Postkasten im Sportlerheim im Waldstadion Kaffeetälchen einzuwerfen.</string>
@@ -167,7 +167,7 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="datenschutzerkl_rung">Datenschutzerklärung</string>
     <string name="_1_">1) Information über die Erhebung personenbezogener Daten und Kontaktdaten des Verantwortlichen</string>
     <string name="_1_1_">1.1 Wir freuen uns, dass Sie unsere Website besuchen und bedanken uns für Ihr Interesse. Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei der Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.</string>
-    <string name="_1_2_">1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist FSV Kali Werra Tiefenort e.V., Kaffeetälchen 3, 36469 Tiefenort, Deutschland, Tel.: 016097053024, E-Mail: vermarktung@kali-werra.de. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</string>
+    <string name="_1_2_">1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die BSG Kali Werra Tiefenort e.V., Kaffeetälchen 3, 36469 Tiefenort, Deutschland, Tel.: 016097053024, E-Mail: vermarktung@kali-werra.de. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</string>
     <string name="_1_3_">1.3 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogener Daten und anderer vertraulicher Inhalte (z.B. Bestellungen oder Anfragen an den Verantwortlichen) eine SSL-bzw. TLS-Verschlüsselung. Sie können eine verschlüsselte Verbindung an der Zeichenfolge „https://“ und dem Schloss-Symbol in Ihrer Browserzeile erkennen.</string>
     <string name="_2_">2) Datenerfassung beim Besuch unserer Website</string>
     <string name="_2_1_">Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, erheben wir nur solche Daten, die Ihr Browser an unseren Server übermittelt (sog. „Server-Logfiles“). Wenn Sie unsere Website aufrufen, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen die Website anzuzeigen: Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website. Eine Weitergabe oder anderweitige Verwendung der Daten findet nicht statt. Wir behalten uns allerdings vor, die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige Nutzung hinweisen.</string>
@@ -211,7 +211,7 @@ Markus Peter (Vorstandsvorsitzender)</string>
     <string name="nicht_aktive_mitglieder">Nicht Aktive Mitglieder</string>
     <string name="offene_ehrenamtliche_stellen_im_verein">Offene ehrenamtliche Stellen im Verein</string>
     <string name="ehrenamtliche_stellen">Ehrenamtliche Stellen</string>
-    <string name="ehrenamtliche_stellen_einleitung">Ein Fußballverein wie Kali Werra Tiefenort besteht nicht nur aus elf Spielern auf dem Feld, sondern auch aus einem eingespielten Team ringsherum. Deshalb sind wir immer auf der Suche nach freiwilligen ehrenamtlichen Helfern rund um die schönste Nebensache der Welt, die unseren FSV Kali Werra Tiefenort tatkräftig unterstützen, um nicht nur die traditionsreiche Vergangenheit des Vereins zu pflegen, sondern auch eine positive Zukunft mitzugestalten. Ziel ist es, den Fußball im Waldstadion Kaffeetälchen als Ort des Geschehens für die nächsten Generationen zu erhalten und weiterzuentwickeln. Komm in das TEAM hinter dem TEAM. Melde Dich einfach bei uns im Kaffeetälchen oder kontaktiere uns mit dem nebenstehenden Kontaktformular. Wir finden für jeden eine Tätigkeit. Wir freuen uns auf dich!</string>
+    <string name="ehrenamtliche_stellen_einleitung">Ein Fußballverein wie Kali Werra Tiefenort besteht nicht nur aus elf Spielern auf dem Feld, sondern auch aus einem eingespielten Team ringsherum. Deshalb sind wir immer auf der Suche nach freiwilligen ehrenamtlichen Helfern rund um die schönste Nebensache der Welt, die unsere BSG Kali Werra Tiefenort tatkräftig unterstützen, um nicht nur die traditionsreiche Vergangenheit des Vereins zu pflegen, sondern auch eine positive Zukunft mitzugestalten. Ziel ist es, den Fußball im Waldstadion Kaffeetälchen als Ort des Geschehens für die nächsten Generationen zu erhalten und weiterzuentwickeln. Komm in das TEAM hinter dem TEAM. Melde Dich einfach bei uns im Kaffeetälchen oder kontaktiere uns mit dem nebenstehenden Kontaktformular. Wir finden für jeden eine Tätigkeit. Wir freuen uns auf dich!</string>
     <string name="t_tigkeit">Tätigkeit</string>
     <string name="schiedsrichter_m_w_d">Schiedsrichter(M,W,D)</string>
     <string name="sb1">- Aktive Schiedsrichter oder Interessenten</string>
