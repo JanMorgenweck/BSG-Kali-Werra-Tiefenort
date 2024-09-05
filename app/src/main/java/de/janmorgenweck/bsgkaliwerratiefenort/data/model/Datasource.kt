@@ -8,7 +8,7 @@ class Datasource {
             Mannschaft(
                 "01",
                 "1. Herren Mannschaft",
-                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-22-23_web-1536x1024.jpg?alt=media&token=6972404a-0f69-48dc-9b31-ed7e3980ad19",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-22-23_web-1536x1066.jpg?alt=media&token=139e41a8-6887-457e-bd9f-39c79f13e48f",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Dienstag: 18:30 Uhr bis 20:00 Uhr | Sportplatz Frauensee\n" +
@@ -28,7 +28,7 @@ class Datasource {
             Mannschaft(
                 "02",
                 "2. Herren Mannschaft",
-                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2F2.-Mannschaft.jpg?alt=media&token=f16c7122-180e-4d28-bed5-5f4a542dfe68",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2F2.-Mannschaft.jpg?alt=media&token=bec5c8e3-3d74-4fb7-8305-cc2758a15643",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Dienstag: 18:30 Uhr bis 20:00 Uhr | Sportplatz Frauensee\n" +
@@ -47,7 +47,7 @@ class Datasource {
             Mannschaft(
                 "03",
                 "Edle Herren",
-                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FAlte-Herren.jpg?alt=media&token=51d08694-c332-47fe-ae8d-2de7c04804e5",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FAlte-Herren.jpg?alt=media&token=96c16c67-66ea-43a6-971d-27b91f2aa885",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Mittwoch: 18:30 Uhr bis 20:00 Uhr | Waldstadion Kaffeetälchen\n" +
@@ -123,7 +123,7 @@ class Datasource {
             Mannschaft(
               "07",
                 "C2 - Junioren",
-                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-C2-Junioren.jpeg?alt=media&token=e327a5de-3dc0-45a7-9b02-1adb3f164e72",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-C2-Junioren.jpg?alt=media&token=e0bf0703-fe1f-45cb-8625-50100809e5cb",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Mittwoch: 16:00 Uhr bis 17:30 Uhr | Sportplatz Kieselbach\n" +
@@ -232,7 +232,7 @@ class Datasource {
                         "Ansprechpartner: Partick Schellenberg, Rene Tschaar",
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
-                "https://www.fussball.de/spieltagsuebersicht/tfv-turnierserie-e-juniorinnen-2024-2025-thueringen-e-juniorinnen-landesturnier-e-juniorinnen-saison2425-thueringen/-/staffel/02QJ5HU07C000000VS5489B3VUHJP2M3-C#!/",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-E-Juniorinnen.jpg?alt=media&token=8bc851ad-bb73-4ef9-992c-c881e3afe13e",
                 "",
                 0,
                 0,
