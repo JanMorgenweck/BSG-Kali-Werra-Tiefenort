@@ -220,17 +220,21 @@ class Datasource {
             Mannschaft(
                 "12",
                 "E - Juniorinnen",
-                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-E-Juniorinnen-1536x1066.jpg?alt=media&token=1aeffb32-ea84-48bf-a34f-fab10bb9257d",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-E-Juniorinnen.jpeg?alt=media&token=dbfa7c51-8aca-4faf-a18e-b3c2373c81ec",
                 "Trainingszeiten:\n" +
                         "\n" +
+                        "Montag: 16:00 Uhr bis 17:30 Uhr | Waldstadion Kaffeetälchen\n" +
                         " \n" +
+                        "Dienstag: 17:00 Uhr bis 18:30 Uhr | Sportplatz Kieselbach\n" +
                         "\n" +
-                        "Ansprechpartner: Sebastian Brenn, Norbert Beck",
+                        "Donnerstag: 17:00 Uhr bis 18:30 | Sportplatz Kaltenborn\n" +
+                        "\n" +
+                        "Ansprechpartner: Partick Schellenberg, Rene Tschaar",
                 "nachwuchs@kali-werra.de",
                 "",
                 "",
                 "",
-                2023,
+                0,
                 0,
                 6311
             ),
