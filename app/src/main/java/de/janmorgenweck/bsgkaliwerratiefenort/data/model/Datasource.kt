@@ -231,8 +231,8 @@ class Datasource {
                         "\n" +
                         "Ansprechpartner: Partick Schellenberg, Rene Tschaar",
                 "nachwuchs@kali-werra.de",
-                "",
-                "",
+                "Ergebnisse auf FUSSBALL.DE",
+                "https://www.fussball.de/spieltagsuebersicht/tfv-turnierserie-e-juniorinnen-2024-2025-thueringen-e-juniorinnen-landesturnier-e-juniorinnen-saison2425-thueringen/-/staffel/02QJ5HU07C000000VS5489B3VUHJP2M3-C#!/",
                 "",
                 0,
                 0,
