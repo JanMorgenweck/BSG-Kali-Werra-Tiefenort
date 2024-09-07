@@ -71,7 +71,7 @@ class Datasource {
             Mannschaft(
                 "04",
                 "A - Junioren",
-                "",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-A-Junioren.jpg?alt=media&token=ea982d1b-4ff9-4068-817c-b1ca2d0c8778",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Montag:\n" +
@@ -203,7 +203,7 @@ class Datasource {
             Mannschaft(
                 "10",
                 "D - Juniorinnen",
-                "",
+                "https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Mannschaft%2FMannschaftsfoto-D-Juniorinnen.jpg?alt=media&token=a8f4e1ab-da0e-458f-8c2b-5666745609b5",
                 "Trainingszeiten:\n" +
                         "\n" +
                         "Montag:\n" +
