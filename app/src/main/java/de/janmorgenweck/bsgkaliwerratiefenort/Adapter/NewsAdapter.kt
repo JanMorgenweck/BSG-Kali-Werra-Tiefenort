@@ -45,11 +45,14 @@ class NewsAdapter(private val newsList: List<QueryDocumentSnapshot>) : RecyclerV
         val formattedDate = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(dateFormat.parse(news.date) ?: Date())
         holder.binding.tvNewsDate.text = formattedDate
 
-        holder.binding.tvNews.text = news.shorttext
+        val shortTextWithBreaks = news.shorttext.replace(".  ", "<br><br>")
+        val fullTextWithBreaks = news.text.replace(".  ", "<br><br>")
+
+        holder.binding.tvNews.text = Html.fromHtml(shortTextWithBreaks, Html.FROM_HTML_MODE_LEGACY)
 
         holder.binding.tvNews.setOnClickListener {
             isExpanded = !isExpanded
-            holder.binding.tvNews.text = if (isExpanded) news.text else news.shorttext
+            holder.binding.tvNews.text = Html.fromHtml(if (isExpanded) fullTextWithBreaks else shortTextWithBreaks, Html.FROM_HTML_MODE_LEGACY)
         }
 
         val linkText = "<a href='${news.link}'>${news.linkText}</a>"
