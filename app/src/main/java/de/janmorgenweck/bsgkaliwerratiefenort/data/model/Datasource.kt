@@ -195,10 +195,10 @@ class Datasource {
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/d-junioren-kreisliga-st1-kreis-westthueringen-d-junioren-kreisliga-d-junioren-saison2425-thueringen/-/staffel/02Q51UA0RC000004VS5489B4VTH92TNV-G#!/",
-                "",
-                0,
-                0,
-                6311
+                "KLST1DJ",
+                2024,
+                4781,
+                6475
             ),
             Mannschaft(
                 "10",
