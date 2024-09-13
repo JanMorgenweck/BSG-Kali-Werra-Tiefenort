@@ -173,9 +173,9 @@ class Datasource {
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/d-junioren-kreisoberliga-kreis-westthueringen-d-junioren-kreisoberliga-d-junioren-saison2425-thueringen/-/staffel/02Q51MJJFO000004VS5489B4VTH92TNV-G#!/",
-                "",
-                0,
-                0,
+                "KOLDJ",
+                2024,
+                4780,
                 6311
             ),
             Mannschaft(
