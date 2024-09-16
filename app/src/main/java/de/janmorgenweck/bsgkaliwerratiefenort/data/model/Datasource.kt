@@ -220,9 +220,9 @@ class Datasource {
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/verbandsliga-thueringen-d-juniorinnen-verbandsliga-d-juniorinnen-saison2425-thueringen/-/staffel/02Q1T7KLK0000004VS5489B3VVLDQQH4-G#!/",
-                "",
-                0,
-                0,
+                "VLDJinnen",
+                2024,
+                4782,
                 6311
             ),
             Mannschaft(
