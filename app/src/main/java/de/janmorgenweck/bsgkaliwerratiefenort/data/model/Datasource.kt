@@ -264,10 +264,10 @@ class Datasource {
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/e-junioren-kreisliga-st4-kreis-westthueringen-e-junioren-kreisliga-e-junioren-saison2425-thueringen/-/staffel/02Q5DV2KES000000VS5489B3VUHDH0E9-G#!/",
-                "",
-                0,
-                0,
-                6311
+                "KLEJST4",
+                2024,
+                4784,
+                6475
             ),
             Mannschaft(
                 "13",
