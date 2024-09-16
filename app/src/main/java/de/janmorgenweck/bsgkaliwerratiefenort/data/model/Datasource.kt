@@ -242,9 +242,9 @@ class Datasource {
                 "nachwuchs@kali-werra.de",
                 "Ergebnisse auf FUSSBALL.DE",
                 "https://www.fussball.de/spieltagsuebersicht/e-junioren-kreisliga-st1-kreis-westthueringen-e-junioren-kreisliga-e-junioren-saison2425-thueringen/-/staffel/02Q5DUO8HC000000VS5489B3VUHDH0E9-G#!/",
-                "",
-                0,
-                0,
+                "KLEJST1",
+                2024,
+                4783,
                 6311
             ),
             Mannschaft(
