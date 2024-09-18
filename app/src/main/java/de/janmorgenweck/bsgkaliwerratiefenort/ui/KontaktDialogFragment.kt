@@ -61,8 +61,8 @@ class KontaktDialogFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.On
             }
         }
 
-        binding.tvEmail1.setOnClickListener {
-            val email = getString(R.string.kali_werra_tiefenort_outlook_de)
+        binding.tvEmailHerren.setOnClickListener {
+            val email = "sport@kali-werra.de"
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "message/rfc822"
                 putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
@@ -76,7 +76,7 @@ class KontaktDialogFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.On
         }
 
         binding.tvEmail2.setOnClickListener {
-            val email = getString(R.string.kali_werra_tiefenort_outlook_de)
+            val email = "organisation@kali-werra.de"
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "message/rfc822"
                 putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
@@ -102,7 +102,19 @@ class KontaktDialogFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.On
                     .show()
             }
         }
-
+        binding.tvEmailDart.setOnClickListener {
+            val email = "dart@kali-werra.de"
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                type = "message/rfc822"
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+            }
+            if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                startActivity(Intent.createChooser(intent, "E-Mail senden"))
+            } else {
+                Toast.makeText(requireContext(), "Keine geeignete App gefunden", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
         binding.tvEmailSponsoring.setOnClickListener {
             val email = getString(R.string.vermarktung_kali_werra_de)
             val intent = Intent(Intent.ACTION_SEND).apply {
