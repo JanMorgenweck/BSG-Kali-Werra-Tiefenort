@@ -10,16 +10,12 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import coil.load
 import de.janmorgenweck.bsgkaliwerratiefenort.databinding.ActivityMainBinding
-import de.janmorgenweck.bsgkaliwerratiefenort.data.Datasource
-import de.janmorgenweck.bsgkaliwerratiefenort.R
+
 
 class MainActivity : AppCompatActivity() {
 
      lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-
-    var datasource = Datasource().loadMannschaften()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,6 +14,7 @@ import de.janmorgenweck.bsgkaliwerratiefenort.Adapter.TabelleAdapter
 import de.janmorgenweck.bsgkaliwerratiefenort.FirebaseViewModel
 import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
 import de.janmorgenweck.bsgkaliwerratiefenort.R
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.FirestoreDatasource
 import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentTabelleBinding
 
 
@@ -21,6 +22,7 @@ class TabelleFragment : Fragment() {
 
     private lateinit var binding: FragmentTabelleBinding
     private val viewModel: FirebaseViewModel by activityViewModels()
+    private val firestoreDatasource = FirestoreDatasource()
     private lateinit var ballAnimation: AnimatedVectorDrawable
     private val animationCallback = object : Animatable2.AnimationCallback(){
         override fun onAnimationEnd(drawable: Drawable?) {
@@ -50,8 +52,16 @@ class TabelleFragment : Fragment() {
         }
 
 
-        binding.tvMannschaftsName.text = (activity as MainActivity).datasource[position!!].name
+        if (position != null) {
 
+            firestoreDatasource.loadMannschaften { mannschaften ->
+                if (mannschaften != null && position < mannschaften.size) {
+                    val mannschaft = mannschaften[position]
+
+                    binding.tvMannschaftsName.text = mannschaft.name
+                }
+            }
+        }
         startAnimation()
 
 

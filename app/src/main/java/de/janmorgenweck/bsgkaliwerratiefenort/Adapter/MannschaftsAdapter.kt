@@ -11,14 +11,11 @@ import de.janmorgenweck.bsgkaliwerratiefenort.data.Mannschaft
 
 
 class MannschaftsAdapter(
-
     private val dataset: List<Mannschaft>
 ) : RecyclerView.Adapter<MannschaftsAdapter.ItemViewHolder>() {
 
-
     inner class ItemViewHolder(val binding: MannschaftItemBinding) :
         RecyclerView.ViewHolder(binding.root)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding =
@@ -26,15 +23,12 @@ class MannschaftsAdapter(
         return ItemViewHolder(binding)
     }
 
-
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-
         val mannschaft = dataset[position]
 
-
+        // Daten setzen
         holder.binding.tvMannschaftsName.text = mannschaft.name
-        holder.binding.ivMannschaftsImage.load(mannschaft.image)
-
+        holder.binding.ivMannschaftsImage.load(mannschaft.image) // Nutze Coil, um das Bild zu laden
 
         holder.binding.root.setOnClickListener {
             holder.itemView.findNavController().navigate(

@@ -109,13 +109,18 @@ dependencies {
     implementation("com.google.firebase:firebase-storage")
 
     // jsoup HTML parser library @ https://jsoup.org/
-    implementation ("org.jsoup:jsoup:1.17.2")
+    implementation("org.jsoup:jsoup:1.17.2")
 
     // FirebaseUI Storage only
-    implementation ("com.firebaseui:firebase-ui-storage:7.2.0")
+    implementation("com.firebaseui:firebase-ui-storage:7.2.0")
 
     //Recyclerview
-    implementation ("androidx.recyclerview:recyclerview:1.1.0")
+    implementation("androidx.recyclerview:recyclerview:1.1.0")
 
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+
+    // Firebase Realtime Database
+    implementation("com.google.firebase:firebase-database-ktx:20.3.0")
+
 }

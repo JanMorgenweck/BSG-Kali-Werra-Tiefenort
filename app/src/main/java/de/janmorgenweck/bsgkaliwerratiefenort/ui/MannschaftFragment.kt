@@ -6,17 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
 import de.janmorgenweck.bsgkaliwerratiefenort.R
 import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentMannschaftBinding
 import de.janmorgenweck.bsgkaliwerratiefenort.Adapter.MannschaftsAdapter
-import de.janmorgenweck.bsgkaliwerratiefenort.data.Datasource
+import de.janmorgenweck.bsgkaliwerratiefenort.data.model.FirestoreDatasource
 
 
 class MannschaftFragment : Fragment() {
 
     private lateinit var binding: FragmentMannschaftBinding
-    private var datasource = Datasource().loadMannschaften()
+    private val firestoreDatasource = FirestoreDatasource()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,8 +30,12 @@ class MannschaftFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        firestoreDatasource.loadMannschaften { mannschaften ->
+            val adapter = MannschaftsAdapter(mannschaften)
+            binding.recyclerView.layoutManager = LinearLayoutManager(context)
+            binding.recyclerView.adapter = adapter
+        }
 
-        binding.recyclerView.adapter = MannschaftsAdapter(datasource)
 
         val originalText = getString(R.string.Mannschaften_Einleitung_Kurz)
         val fullText = getString(R.string.Mannschaften_Einleitung)
