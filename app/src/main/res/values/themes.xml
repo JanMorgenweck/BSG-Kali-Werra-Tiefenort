@@ -1,15 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Basis-Anwendungsthema -->
     <style name="Base.Theme.BSGKaliWerraTiefenort" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Hier kann das Light-Theme angepasst werden -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!-- App-spezifisches Theme -->
     <style name="Theme.BSGKaliWerraTiefenort" parent="Base.Theme.BSGKaliWerraTiefenort" />
-    <style name="Text">
+
+    <!-- Text-Stil mit eindeutigerem Namen -->
+    <style name="AppTextStyleCustom">
         <item name="android:textColor">@color/black</item>
     </style>
-    <style name="imagebutton" parent="Widget.AppCompat.ImageButton">
+
+    <!-- Benutzerdefinierter ImageButton-Stil mit eindeutigerem Namen -->
+    <style name="CustomImageButtonStyle" parent="Widget.AppCompat.ImageButton">
         <item name="android:tint">@color/black</item>
     </style>
 </resources>

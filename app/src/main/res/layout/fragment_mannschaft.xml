@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/textView5"
-            style="@style/Text"
+            style="@style/AppTextStyleCustom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

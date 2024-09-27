@@ -103,7 +103,7 @@
 
     <TextView
         android:id="@+id/onlineShop"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -119,7 +119,7 @@
 
     <TextView
         android:id="@+id/Sponsoren"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -134,7 +134,7 @@
 
     <TextView
         android:id="@+id/ueberUns"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -149,7 +149,7 @@
 
     <TextView
         android:id="@+id/mannschaften"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -164,7 +164,7 @@
 
     <TextView
         android:id="@+id/verein"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -179,7 +179,7 @@
 
     <TextView
         android:id="@+id/neuigkeiten"
-        style="@style/Text"
+        style="@style/AppTextStyleCustom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

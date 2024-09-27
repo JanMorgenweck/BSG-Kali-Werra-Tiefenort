@@ -46,7 +46,7 @@
 
             <ImageView
                 android:id="@+id/arrow_back"
-                style="@style/imagebutton"
+                style="@style/CustomImageButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
@@ -63,7 +63,7 @@
 
             <ImageView
                 android:id="@+id/homeicon"
-                style="@style/imagebutton"
+                style="@style/CustomImageButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="28dp"
