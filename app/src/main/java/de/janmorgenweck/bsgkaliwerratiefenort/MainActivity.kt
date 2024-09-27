@@ -8,6 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import coil.load
 import de.janmorgenweck.bsgkaliwerratiefenort.databinding.ActivityMainBinding
 
@@ -23,22 +24,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navController = navHostFragment.navController
+
         binding.backround.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra_KONTUR-1646x2048.jpg?alt=media&token=73dba061-e69f-41ac-a7cb-808632ea5008")
         handleOnBackPressed()
 
         binding.logoToolbar.load("https://firebasestorage.googleapis.com/v0/b/kali-werra-tiefenort.appspot.com/o/Logo-BSG-Kali-Werra.jpg?alt=media&token=9af4b237-a4b7-4728-beeb-57f5d0c0b384")
 
         binding.arrowBack.setOnClickListener {
-            findNavController(R.id.fragmentContainerView).navigateUp()
+            navController.navigateUp()
         }
 
         binding.homeicon.setOnClickListener {
-            findNavController(R.id.fragmentContainerView).navigate(R.id.startseiteFragment)
+            navController.navigate(R.id.startseiteFragment)
         }
 
         binding.ivMenu.setOnClickListener {
             showPopupMenu()
         }
+
+        handleOnBackPressed()
 
     }
 
@@ -46,17 +52,15 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
     private fun handleOnBackPressed() {
-        val callback = object : OnBackPressedCallback(true) {
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                val currentDestination = binding.fragmentContainerView.findNavController().currentDestination
-                if (currentDestination?.id == R.id.startseiteFragment){
-                    finish()
-                }else {
-                    binding.fragmentContainerView.findNavController().navigateUp()
+                if (navController.currentDestination?.id == R.id.startseiteFragment) {
+                    finish() // App beenden, wenn wir auf der Startseite sind
+                } else {
+                    navController.navigateUp() // Sonst zurück navigieren
                 }
             }
-        }
-        onBackPressedDispatcher.addCallback(callback)
+        })
     }
 
     private fun showPopupMenu(){
@@ -65,27 +69,27 @@ class MainActivity : AppCompatActivity() {
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId){
                 R.id.action_startseite -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.startseiteFragment)
+                    navController.navigate(R.id.startseiteFragment)
                     true
                 }
                 R.id.action_Neuigkeiten -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.neuigkeitenFragment)
+                    navController.navigate(R.id.neuigkeitenFragment)
                     true
                 }
                 R.id.action_verein -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.vereinFragment)
+                    navController.navigate(R.id.vereinFragment)
                     true
                 }
                 R.id.action_manschaften -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.mannschaftFragment)
+                    navController.navigate(R.id.mannschaftFragment)
                     true
                 }
                 R.id.action_ueberUns -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.ueberUnsFragment)
+                    navController.navigate(R.id.ueberUnsFragment)
                     true
                 }
                 R.id.action_sponsorenPartner -> {
-                    findNavController(R.id.fragmentContainerView).navigate(R.id.sponsorenFragment)
+                    navController.navigate(R.id.sponsorenFragment)
                     true
                 }
                 R.id.action_onlineShop -> {

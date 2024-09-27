@@ -1,6 +1,8 @@
 package de.janmorgenweck.bsgkaliwerratiefenort.ui
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,39 +12,40 @@ import androidx.navigation.fragment.findNavController
 import de.janmorgenweck.bsgkaliwerratiefenort.MainActivity
 import de.janmorgenweck.bsgkaliwerratiefenort.R
 import de.janmorgenweck.bsgkaliwerratiefenort.databinding.FragmentWelcomeBinding
-import java.util.Timer
-import java.util.TimerTask
+
+
 
 class WelcomeFragment : Fragment() {
     private lateinit var binding: FragmentWelcomeBinding
-    private lateinit var timer: Timer
+    private val handler = Handler(Looper.getMainLooper())
+    private val navigateRunnable = Runnable {
+        // Sicherstellen, dass das Fragment noch an den NavController gebunden ist, bevor navigiert wird
+        if (isAdded && findNavController().currentDestination?.id == R.id.welcomeFragment) {
+            findNavController().navigate(R.id.startseiteFragment)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentWelcomeBinding.inflate(inflater,container,false)
+        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        timer = Timer()
-        timer.schedule(object : TimerTask() {
-            override fun run() {
-                activity?.runOnUiThread {
-                    // Hier können Sie Ihre Aktion ausführen, z.B. Navigation zum HomeFragment
-                    findNavController().navigate(R.id.startseiteFragment)
-                }
-            }
-        }, 3000) // 3 Sekunden Verzögerung
+        // 3 Sekunden Verzögerung, bevor zur Startseite navigiert wird
+        handler.postDelayed(navigateRunnable, 3000)
 
+        // Toolbar ausblenden
         (activity as MainActivity).binding.toolbar.isGone = true
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        timer.cancel() // Timer stoppen, um Memory Leaks zu vermeiden
+        // Handler-Callbacks entfernen, um Memory Leaks zu vermeiden
+        handler.removeCallbacks(navigateRunnable)
     }
 }
