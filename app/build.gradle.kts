@@ -25,7 +25,7 @@ secrets {
 
 android {
     namespace = "de.janmorgenweck.bsgkaliwerratiefenort"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "de.janmorgenweck.bsgkaliwerratiefenort"
@@ -71,12 +71,12 @@ dependencies {
     val retrofitVersion = "2.9.0"
     val roomVersion = "2.6.0"
 
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.1")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
@@ -98,7 +98,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     //Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
 
 
     //TODO: Add the dependencies for Firebase products you want to use
